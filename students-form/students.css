@@ -1,0 +1,100 @@
+html{
+    box-sizing: border-box;
+}
+  
+  *,
+  *::before,
+  *::after {            
+    box-sizing: inherit;
+}
+  
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul{
+    margin: 0;
+}
+
+.flex{
+    display: flex;
+} 
+
+.name-head-cell{
+    cursor: pointer;
+}
+
+.birth-head-cell{
+    cursor: pointer;
+}
+
+.start-head-cell{
+    cursor: pointer;
+}
+
+.faculty-head-cell{
+    cursor: pointer;
+}
+
+.add-student-form{
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.alert-block{
+    color: red;
+}
+
+.filter{
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+} 
+
+
+.students-table{
+    margin: 0 auto;
+}
+
+.head-row{
+    margin-bottom: 20px;
+}
+
+.table-caption{
+    margin-bottom: 10px;
+}
+
+.name-head-cell:hover{
+    background-color:lightblue;
+    cursor: pointer;
+}
+
+.birth-head-cell:hover{
+    background-color:lightblue;
+    cursor: pointer;
+}
+
+.start-head-cell:hover{
+    background-color:lightblue;
+    cursor: pointer;
+}
+
+.faculty-head-cell:hover{
+    background-color:lightblue;
+    cursor: pointer;
+}
+
+.name-cell{
+    align-content: center;
+}
+
+.delete-icon{
+    margin-right: 20px;
+    cursor: pointer;
+}

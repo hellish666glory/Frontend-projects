@@ -1,0 +1,107 @@
+html{
+    box-sizing: border-box;
+}
+  
+  *,
+  *::before,
+  *::after {            
+    box-sizing: inherit;
+}
+  
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul{
+    margin: 0;
+}
+
+.btn-reset{
+    padding: 0;
+    background-color: goldenrod;
+    cursor: pointer;
+}
+
+.btn{
+    color:black;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.header-title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.starter{
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 40px;
+}
+
+.input{
+    width:301px;
+}
+
+.card{
+    height: 70px;
+    width: 70px;
+    border-style: dashed;
+    border-color:dodgerblue;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cardNumber{
+    font-weight: 900;
+}
+
+.cardDeck{
+    margin: 0 auto;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+#cards16{
+    width: 304px;
+}
+
+#cards36{
+    width: 460px;
+}
+
+#cards64{
+    width: 616px;
+}
+
+#cards100{
+    width: 772px;
+}
+
+#cardclose{
+    content-visibility: hidden;
+}
+
+#cardopen{
+    content-visibility: visible;
+    background-color: darkkhaki;
+}
+
+#cardmatch{
+    content-visibility: visible;
+    background-color: chartreuse;
+}
