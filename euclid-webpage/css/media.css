@@ -1,0 +1,484 @@
+@media(max-width: 1600px) {
+    .footer-text-block{
+        display: none;
+    }
+
+    .about-us-smallblock{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .smallblock-svg{
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 1024px){
+
+    .container{
+        max-width: 1024px;
+        padding: 0 50px;
+    }
+
+    .header{
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
+
+    .logo-img{
+        max-width: 150px;
+    }
+
+    .navigation{
+        margin-right: 105px;
+    }
+
+    .nav-list{
+        gap: 60px;
+    }
+
+    .about-us-text{
+        max-width: 100%;
+    }
+
+    .projects-header{
+        font-size: 60px;
+        line-height: 73.14px;
+    }
+
+    .projects-text{
+        font-size: 20px;
+        line-height: 24.38px;
+    }
+
+    .projects-button{
+        font-size: 24px;
+    }
+
+    .about-us-content-block{
+        width: 100%;
+    }
+
+    .about-us-bigblock{
+        height: 640px;
+        width: 100%;
+    }
+
+    .bigblock-text{
+        width: 454px;
+    }
+
+    .about-us-smallblock{
+        margin-bottom: 0;
+        flex-direction: row;
+    }
+
+    .smallblock-svg{
+        margin-bottom: 0;
+    }
+
+    .consult-block{
+        width: calc((100% - 50px)/2);
+        margin-right: 50px;
+    }
+
+    .stages-img{
+        border-radius: 32px;
+        width: calc((100% - 50px)/2);
+        object-fit: cover;
+        object-position: 50% 0;
+    }
+
+    .question-item{
+        width: 100%;
+    }
+
+    .form-block{
+        max-width: 541px;
+    }
+
+    .footer-text-block{
+        display: none;
+    }
+
+    .application-btn{
+        padding: 19px 37.5px;
+        white-space: nowrap;
+    }
+
+}
+
+@media(max-width: 768px){
+
+    .header{
+        padding-top: 17px;
+        padding-bottom: 17px;
+    }
+
+    .container{
+        max-width: 768px;
+        padding: 0 50px;
+    }
+
+    .logo-img{
+        max-width: 110px;
+    }
+
+    .navigation{
+        margin-right: 48px;
+    }
+
+    .nav-list{
+        gap: 40px;
+    }
+
+    .nav-list-item{
+        font-size: 16px;
+        line-height: 19.5px;
+    }
+
+    .projects-header{
+        font-size: 50px;
+        line-height: 60.95px;
+    }
+
+    .projects-text{
+        font-size: 18px;
+        line-height: 21.94px;
+    }
+
+    .projects-container{
+        padding: 160px 40px;
+    }
+
+    .projects-button{
+        padding: 25px 39px;
+        font-size: 23px;
+        line-height: 28.04px;
+    }
+
+    .bigblock-text{
+        max-width: 366px;
+    }
+
+    .about-us-smallblock{
+        align-items: center;
+        padding: 35px 46px 35px 40px;
+    }
+
+    .smallblock-svg{
+        max-width: 119px;
+        margin-right: 16px;
+    }
+
+    .stages-block{
+        flex-direction: column-reverse;
+    }
+
+    .consult-block{
+        width: 100%;
+    }
+
+    .stages-img{
+        height: 284px;
+        width: 100%;
+        margin-bottom: 38px;
+    }
+
+    .footer-block{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .footer-list{
+        display: none;
+    }
+
+    .list-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .form-block{
+        margin-bottom: 50px;
+    }
+
+    .footer-logo-img{
+        margin-bottom: 16px;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .container{
+        max-width: 320px;
+        padding: 0 15px;
+    }
+
+    .header{
+        margin-bottom: 20px;
+        padding-bottom: 0;
+    }
+
+    .section{
+        margin-bottom: 60px;
+    }
+
+    .header-container{
+        flex-wrap: wrap;
+        padding-bottom: 40px;
+    }
+
+    .navigation{
+        padding-top: 20px;
+        order: 2;
+        margin-right: 0;
+    }
+
+    .projects-container{
+        display: flex;
+        flex-direction: column;
+        padding: 60px 21px 59px 22px;
+        align-items: center;
+    }
+
+    .projects-header{
+        white-space: nowrap;
+        font-size: 20px;
+        line-height: 24.38px;
+        text-align: center;
+        margin-bottom: 6px;
+    }
+
+    .projects-text{
+        font-size: 12px;
+        line-height: 14.63px;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .projects-button{
+        font-size: 12px;
+        line-height: 14.63px;
+        padding: 13px 28px;
+    }
+
+    .section-header{
+        font-size: 24px;
+        line-height: 29.26px;
+    }
+
+    .logo{
+        order: 0;
+    }
+
+    .search-btn{
+        order: 1;
+    }
+
+    .nav-list{
+        gap: 24px;
+    }
+
+    .about-us-bigblock{
+        background: none;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .about-us-text{
+        font-size: 14px;
+        line-height: 28px;
+        margin-bottom: 14px;
+    }
+
+    .hidden-block-img{
+        display: block;
+        height: 200px;
+    }
+
+    .hidden-img{
+        border-radius: 16px;
+    }
+
+    .bigblock-footer{
+        width: 100%;
+        background: none;
+        flex-direction: column;
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    .bigblock-text{
+        width: inherit;
+        color: #000000;
+        font-weight: 400;
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .more-btn{
+        font-weight: 700;
+        line-height: 14.63px;
+        font-size: 12px;
+        color:#FF9900;
+        padding: 12.31px 44px;
+    }
+
+    .more-btn:hover{
+        color: #FFFFFF;
+    }
+
+    .more-btn:focus{
+        color: #FFFFFF;
+    }
+
+    .more-btn:active{
+        color: #FFFFFF;
+    }
+
+    .about-us-smallblock{
+        flex-direction: column;
+        border: none;
+        max-width: 290px;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    .smallblock-svg{
+        max-width: 64px;
+        margin-bottom: 12px;
+    }
+
+    .smallblock-header{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21.94px;
+    }
+
+    .smallblock-text{
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .stages-img{
+        height: 160px;
+        margin-bottom: 16px;
+    }
+
+    .section-header{
+        margin-bottom: 20px;
+    }
+
+    .stages-block{
+        margin-bottom: 60px;
+    }
+
+    .consult-header{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        margin-bottom: 8px;
+    }
+
+    .consult-text{
+        font-size: 14px;
+        line-height: 28px;
+        margin-bottom: 24px;
+    }
+
+    .stages-btn-block{
+        gap: 10px;
+    }
+
+    .more-consult-btn{
+        padding: 12.31px 44px;
+        font-size: 12px;
+        line-height: 14.63px;
+    }
+
+    .contract-btn{
+        padding: 12px 32px;    
+        font-size: 12px;
+        line-height: 14.63px;
+    }
+
+    .question-item{
+        padding: 0;
+        border: none;
+    }
+
+    .question-header{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21.94px;
+    }
+
+    .question-text{
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .footer-block{
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .form-block{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .form-header{
+        font-size: 24px;
+        line-height: 29.26px;
+    }
+
+    .form-input::placeholder{
+        font-size: 14px;
+        line-height: 32px;
+    }
+
+    .message-input{
+        margin-bottom: 25px;
+    }
+
+    .confirm-block{
+        flex-direction: column;
+    }
+
+    .application-btn{
+        padding: 12.31px 19px 12.69px 19px;
+        margin-bottom: 11px;
+        font-size: 12px;
+        line-height: 14.63px;
+        border-radius: 8px;
+        margin-right: 0;
+    }
+
+    .list-block{
+        width: 100%;
+        border-top: 1px solid #414141;
+        align-items: center;
+        padding-top: 17px;
+    }
+
+    .footer-icon{
+        max-width: 40px;
+    }
+
+    .icon-btn{
+        height: 40px;
+    }
+
+    .icon-btn:not(:last-child) {
+        margin-right: 16.08px;
+    }
+
+    .footer-logo-img{
+        max-width: 131px;
+        margin-bottom: 16px;
+    }
+}
