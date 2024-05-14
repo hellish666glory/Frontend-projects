@@ -8,6 +8,10 @@ html{
     box-sizing: inherit;
 }
 
+h1, h2, h3, h4, h5, h6, p, ul{
+    margin: 0;
+}
+
 :root{
     --greyscale-00: #000000;
     --greyscale-01: #181818;
@@ -29,6 +33,19 @@ html{
     --additional-02: #EC1211;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .btn-reset{
     padding: 0;
     border: none;
@@ -48,43 +65,219 @@ html{
 }
 
 .body{
-    font-family: 'Outfit';
+    font-family: Outfit, sans-serif;
     margin: 0;
     background-color: var(--greyscale-01);
+    color: var(--greyscale-07);
 }
 
-.header{
-
+.section{
+    margin-bottom: 100px;
 }
 
-.header-container{
-    display: flex;
-    flex-direction: column;
+.container{
     margin: 0 auto;
+    padding: 0 60px;
     max-width: 1440px;
 }
 
-.header__top{
+.choose-page__block{
     height: 38px;
     background-color: var(--secondary-02);
 }
 
-.header__top-link-block{
-    padding-left: 60px;
+.choose-page__link-block{
+    display: flex;
 }
 
-.header__link{
+.choose-page__link{
     padding: 9px 40px;
 }
 
-.header__link__text{
+.choose-page__text{
     font-weight: 500;
     font-size: 16px;
     line-height: 20.16px;
 }
 
-.header-business-link{
+.choose-business-link{
     border-radius: 20px 20px 0px 0px;
     color: var(--greyscale-07);
     background-color: var(--greyscale-01);
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: var(--greyscale-01);
+    z-index: 100;
+}
+
+.header-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    padding: 7px 60px;
+}
+
+.contact-sales-btn{
+    padding: 16px 30px;
+    background-color: var(--primary-01);
+    border-radius: 16px;
+}
+
+.contact-sales-btn__text{
+    color: var(--greyscale-07);
+    font-family: 'Outfit';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25.2px;
+}
+
+.banner{
+    position: relative;
+    padding: 130px 0 0 110px;
+    margin: 0 auto;
+    height: 821px;
+    max-width: 1440px;
+}
+
+.banner__header{
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 101.76px;
+    color: var(--greyscale-07);
+    max-width: 673px;
+    font-feature-settings: 'liga' off;
+    margin-bottom: 20px;
+}
+
+.banner__text{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--greyscale-07);
+    max-width: 534px;
+    margin-bottom: 40px;
+}
+
+.about-content{
+    display: flex;
+}
+
+.about-block__header{
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 101.76px;
+    color: var(--greyscale-07);
+    margin-bottom: 80px;
+}
+
+.about-block__text-block{
+    max-width: 410px;
+    margin-right: 118px;
+}
+
+.about-block__text{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 45.36px;
+}
+
+.about-block__list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-block__item:nth-child(1){
+    margin-right: 70px;
+    margin-bottom: 92px;
+    max-width: 321px;
+}
+
+.about-block__item:nth-child(2){
+    margin-bottom: 70px;
+    max-width: 301px;
+}
+
+.about-block__item:nth-child(3){
+    margin-right: 85px;
+    max-width: 319px;
+}
+
+.about-block__item:nth-child(4){
+    max-width: 336.01px;
+}
+
+.about-block__item-svg{
+    margin-bottom: 10px;
+}
+
+.about-block__item-header{
+    font-size: 48px;
+    font-weight: 700px;
+    line-height: 50.88px;
+    margin-bottom: 20px;
+}
+
+.about-block__item-text{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28.8px;
+}
+
+.how-works-block{
+    position: relative;
+    margin: 0 auto;
+}
+
+.how-works__list-block{
+    padding: 46px 0;
+}
+
+.how-works-block__list{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    gap: 20px;
+}
+
+.how-works-block__list:not(:last-child){
+    margin-bottom: 68px;
+}
+
+.how-works__phone-block{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 308px;
+    height: 623px;
+}
+
+.phone-video{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: -1;
+}
+
+.how-works-block__item{
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 135.68px;
+}
+
+.turquoise-text{
+    color: var(--secondary-01);
+}
+
+.transparent-text{
+    color: transparent;
+    -webkit-text-stroke: 1px var(--greyscale-02);
+}
+
+.purple-text{
+    color: var(--primary-02);
 }
