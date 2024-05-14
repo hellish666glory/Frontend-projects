@@ -1,0 +1,90 @@
+html{
+    box-sizing: border-box;
+}
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+:root{
+    --greyscale-00: #000000;
+    --greyscale-01: #181818;
+    --greyscale-02: #444444;
+    --greyscale-03: #B9B9B9;
+    --greyscale-04: #CFCFCF;
+    --greyscale-05: #E4E4E4;
+    --greyscale-06: #F5F5F5;
+    --greyscale-07: #FFFFFF;
+    --primary-00: #7B31D4;
+    --primary-01: #954CED;
+    --primary-02: #A64CED;
+    --primary-03: #BA8BF3;
+    --primary-04: #954CED33;
+    --secondary-01: #2FDBBC;
+    --secondary-02: #FFAA4C;
+    --secondary-03: #C1DB2F;
+    --additional-01: #FF6C2D;
+    --additional-02: #EC1211;
+}
+
+.btn-reset{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.link-reset{
+    color: inherit;
+    text-decoration: none;
+}
+
+.body{
+    font-family: 'Outfit';
+    margin: 0;
+    background-color: var(--greyscale-01);
+}
+
+.header{
+
+}
+
+.header-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.header__top{
+    height: 38px;
+    background-color: var(--secondary-02);
+}
+
+.header__top-link-block{
+    padding-left: 60px;
+}
+
+.header__link{
+    padding: 9px 40px;
+}
+
+.header__link__text{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20.16px;
+}
+
+.header-business-link{
+    border-radius: 20px 20px 0px 0px;
+    color: var(--greyscale-07);
+    background-color: var(--greyscale-01);
+}
