@@ -6,7 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function onScroll(){
         document.addEventListener('scroll', () => {
             let y = window.scrollY
-            y > 100 ? pageChooser.classList.add('visually-hidden') : pageChooser.classList.remove('visually-hidden')
+            if (y > 38){
+                pageChooser.classList.add('visually-hidden');
+                header.classList.add('fixed');
+            } else{
+                pageChooser.classList.remove('visually-hidden');
+                header.classList.remove('fixed');
+            }
         })
     }
 });

@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <script defer src="main.js"></script>
@@ -93,10 +90,14 @@
         <section class="section">
             <div class="how-works-block">
                 <div class="how-works__phone-block">
-                    <img src="public/phone-border.png" alt="Phone image" class="how-works__img">
-                    <video class="phone-video" autoplay="true" loop="true" muted="true" preload="auto" playsinline="auto">
-                        <source src="public/phone-video.mp4" type="video/mp4"></source>
-                    </video>
+                    <div class="phone-border__block">
+                        <img src="public/phone-border.png" alt="Phone image" class="how-works__img">
+                    </div>
+                    <div class="phone-video__block">
+                        <video class="phone-video" autoplay="true" loop="true" muted="true" preload="auto" playsinline="auto">
+                            <source src="public/phone-video.webm" type="video/webm"></source>
+                        </video>
+                    </div>
                 </div>
                 <div class="how-works__list-block">
                     <ul class="how-works-block__list list-reset">
@@ -130,49 +131,71 @@
             </div>
         </section>
         <section class="section">
+            <div class="purple-block">
+                    <ul class="percentage-block__list list-reset">
+                        <li class="percentage-block__item">
+                            <h4 class="percentage">15%</h3>
+                            <span class="percentage__text">Increase in Purchase Amount</span>
+                        </li>
+                        <li class="percentage-block__item">
+                            <h4 class="percentage">30%</h3>
+                            <span class="percentage__text">Growth in Annual Sales</span>
+                        </li>
+                        <li class="percentage-block__item">
+                            <h4 class="percentage">10%</h3>
+                            <span class="percentage__text">Growth in New Customers</span>
+                        </li>
+                    </ul>
+            </div>
             <div class="container">
-                <div class="purple-block">
-                    <div class="percentage-block">
-                        <ul class="percentage-block__list list-reset">
-                            <li class="percentage-block__item">
-                                <h4 class="percentage">15%</h3>
-                                <span class="percentage__text">Increase in Purchase Amount</span>
-                            </li>
-                            <li class="percentage-block__item">
-                                <h4 class="percentage">30%</h3>
-                                <span class="percentage__text">Growth in Annual Sales</span>
-                            </li>
-                            <li class="percentage-block__item">
-                                <h4 class="percentage">10%</h3>
-                                <span class="percentage__text">Growth in New Customers</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
                 <div class="why-budss-block">
-                    <h4 class="why-budss-block__header">Why Budss</h3>
-                    <p class="why-budss-block__text">We Provide Advanced Payment Solutions To Grow Your Business</p>
-                </div>
-                <div class="why-budss-articles">
-                    <div class="why-budss-articles__line">
-                        <article class="articles-blocks">
-                            <h4 class="article__header">Turn your customers into loyal influencers</h3>
-                            <p class="article__text">Budss helps businesses harness the exponential power of loyal customers for acquisition and retention.</p>
-                        </article>
-                        <article class="articles-blocks">
-                            <h3 class="article__header">Harness the power of buying in bulk</h3>
-                            <p class="article__text">Get at least 2X more sales with Budss Buying Groups. Your customer base will grow exponentially as your customers add their friends & family to your personalized group.</p>
-                        </article>
+                    <div class="why-budss-smallblock">
+                        <h3 class="why-budss-block__header">Why Budss</h3>
+                        <p class="why-budss-block__text">We Provide Advanced Payment Solutions To Grow Your Business</p>
                     </div>
-                    <div class="why-budss-articles__line">
-                        <article class="articles-blocks">
-                            <h4 class="article__header">Supercharge Loyalty With Instant Cash Back</h3>
-                            <p class="article__text">Budss allows for shoppers to earn immediate cash back at their favorite stores.</p>
-                        </article>
-                        <article class="articles-blocks">
-                            <h4 class="article__header">Seasoned with AI and Gamification</h3>
-                            <p class="article__text">AI programming creates a personalized customer journey, offering recommendations for their next purchase and optimizing rewards for after purchase.</p>
-                        </article>
+                    <div class="why-budss-articles">
+                        <div class="why-budss-articles__line">
+                            <article class="articles-blocks">
+                                <div class="article-img-block">
+                                    <img src="public/article-img1.png" alt="" class="article-img">
+                                </div>
+                                <div class="article-text-block">
+                                    <h4 class="article__header">Turn your customers into loyal influencers</h3>
+                                    <p class="article__text">Budss helps businesses harness the exponential power of loyal customers for acquisition and retention.</p>
+                                </div>
+                            </article>
+                            <article class="articles-blocks">
+                                <div class="article-img-block">
+                                    <img src="public/article-img2_turcoise.png" alt="" class="article-img">
+                                    <img src="public/article-img2_orange.png" alt="" class="article-img">
+                                    <img src="public/article-img2_purple.png" alt="" class="article-img">
+                                </div>
+                                <div class="article-text-block">
+                                    <h3 class="article__header">Harness the power of buying in bulk</h3>
+                                    <p class="article__text">Get at least 2X more sales with Budss Buying Groups. Your customer base will grow exponentially as your customers add their friends & family to your personalized group.</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="why-budss-articles__line">
+                            <article class="articles-blocks">
+                                <div class="article-img-block">
+                                    <img src="public/article-img3.png" alt="" class="article-img">
+                                </div>
+                                <div class="article-text-block">
+                                    <h4 class="article__header">Supercharge Loyalty With Instant Cash Back</h3>
+                                    <p class="article__text">Budss allows for shoppers to earn immediate cash back at their favorite stores.</p>
+                                </div>
+                            </article>
+                            <article class="articles-blocks">
+                                <div class="article-img-block">
+                                    <img src="public/article-img4.png" alt="" class="article-img">
+                                </div>
+                                <div class="article-text-block">
+                                    <h4 class="article__header">Seasoned with AI and Gamification</h3>
+                                    <p class="article__text">AI programming creates a personalized customer journey, offering recommendations for their next purchase and optimizing rewards for after purchase.</p>
+                                </div>
+                            </article>
+                        </div>
                     </div>
                 </div>
             </div>
