@@ -118,6 +118,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
     margin: 0;
     background-color: var(--greyscale-01);
     color: var(--greyscale-07);
+    overflow-x: hidden;
 }
 
 .section:not(:last-child){
@@ -202,9 +203,16 @@ h1, h2, h3, h4, h5, h6, p, ul{
 
 .banner__figure{
     position: absolute;
-    bottom: 6.23px;
-    left: 804.58px;
+    width: 2000px;
+    left: 820px;
+    top: -20px;
     z-index: -1;
+}
+
+.wrapper{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
 }
 
 .banner__content{
@@ -480,9 +488,6 @@ h1, h2, h3, h4, h5, h6, p, ul{
 }
 
 .why-budss-articles__line:nth-child(1) > .articles-blocks:nth-child(2){
-    /* padding: 36px 0 38px 40px; */
-    /* padding-top: 40px;
-    padding-left: 40px; */
     padding: 40px 91px 86px 40px;
     max-width: 547px;
 }
@@ -496,12 +501,6 @@ h1, h2, h3, h4, h5, h6, p, ul{
     padding: 40px 0 86px 40px;
     max-width: 733px;
 }
-
-/* .article-img-block{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-} */
 
 .article-img{
     position: absolute;
@@ -624,7 +623,6 @@ h1, h2, h3, h4, h5, h6, p, ul{
 }
 
 .your-brands-header{
-    /* width: 100%; */
     width: 822px;
     font-weight: 700;
     font-size: 96px;
@@ -641,7 +639,6 @@ h1, h2, h3, h4, h5, h6, p, ul{
 
 .contacts-block{
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     flex-direction: column;
     gap: 2px;
