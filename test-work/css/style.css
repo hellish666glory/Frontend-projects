@@ -121,6 +121,10 @@ h1, h2, h3, h4, h5, h6, p, ul{
     overflow-x: hidden;
 }
 
+.section{
+    overflow: hidden;
+}
+
 .section:not(:last-child){
     margin-bottom: 100px;
 }
@@ -209,12 +213,6 @@ h1, h2, h3, h4, h5, h6, p, ul{
     z-index: -1;
 }
 
-.wrapper{
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-}
-
 .banner__content{
     z-index: 1;
 }
@@ -236,6 +234,16 @@ h1, h2, h3, h4, h5, h6, p, ul{
     color: var(--greyscale-07);
     max-width: 534px;
     margin-bottom: 40px;
+}
+
+.about-block{
+    position: relative;
+}
+
+.about-figure__block{
+    position: absolute;
+    bottom: -175px;
+    right: 1100px;
 }
 
 .about-content{
