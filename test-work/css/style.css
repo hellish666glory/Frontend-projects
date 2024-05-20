@@ -53,7 +53,7 @@ html{
     font-weight: 500;
 }
 
-@keyframes marquee-right-1 {
+@keyframes marquee-right {
     0% { 
         transform: translateX(-100%); 
     }
@@ -62,21 +62,21 @@ html{
     }
 }
 
-@keyframes marquee-right-2 {
-    0% { 
-        transform: translateX(-200%); 
-    }
-    100% { 
-        transform: translateX(0%); 
-    }
-}
-
 @keyframes marquee-left{
     0% {
         transform: translateX(0%);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
 
@@ -85,6 +85,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
 }
 
 :root{
+    --loading: url(../public/loading.svg);
     --greyscale-00: #000000;
     --greyscale-01: #181818;
     --greyscale-02: #444444;
@@ -163,6 +164,102 @@ h1, h2, h3, h4, h5, h6, p, ul{
     width: 100%;
 }
 
+.cookie-block{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    position: fixed;
+    margin: 0 auto;
+    max-width: 1285px;
+    width: 100%;
+    background-color: var(--greyscale-07);
+    border-radius: 16px;
+    z-index: 100;
+    bottom: 30px;
+    left: 17%;
+    animation: ani 2s forwards;
+}
+
+@keyframes ani {
+    0% {transform: translateY(150%);}
+    100% {transform: translateY(0);}
+  }
+
+.cookie__text{
+    max-width: 783px;
+    width: 100%;
+    color: #383838;
+    font-weight: 300;
+    font-size: 20;
+    line-height: 28px;
+}
+
+.cookie-btn__block{
+    margin-right: 30px;
+}
+
+.cookie__btn{
+    overflow: hidden;
+    position: relative;
+    font-weight: 600;
+    font-size: 20;
+    line-height: 25.2px;
+    padding: 16px 30px;
+    border-radius: 16px;
+    will-change: transform;
+    transition: background-color .3s ease, border-color .3s ease, color .3s ease, fill .3s ease, transform .3s ease-in-out;
+    z-index: 0;
+}
+
+.accept{
+    border: 2px solid var(--primary-01);
+    background-color: var(--primary-01);
+    color: var(--greyscale-07);
+}
+
+.cookie__btn::after{
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%) rotate(10deg);
+    transform-origin: top left;
+    transition: transform .3s ease-in-out;
+    will-change: transform;
+    z-index: -1;
+    border-radius: 16px;
+    background-color: var(--greyscale-01);
+}
+
+.cookie__btn:hover::after{
+    transform: translateX(0%);
+}
+
+.decline{
+    border: 2px solid var(--primary-01);
+}
+
+.decline:hover{
+    color: var(--greyscale-07)
+}
+
+.cookie__btn:not(:last-child){
+    margin-right: 20px;
+}
+
+.close-cookie{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+}
+
 .choose-page__block{
     height: 38px;
     background-color: var(--secondary-02);
@@ -203,9 +300,86 @@ h1, h2, h3, h4, h5, h6, p, ul{
 }
 
 .contact-sales-btn{
+    position: relative;
+    overflow: hidden;
     padding: 16px 30px;
     background-color: var(--primary-01);
     border-radius: 16px;
+    border: 2px solid var(--primary-01);
+    will-change: transform;
+    transition: background-color .3s ease, border-color .3s ease, color .3s ease, fill .3s ease, transform .3s ease-in-out;
+    z-index: 0;
+}
+
+.btn-loading .contact-sales-btn__text{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.btn-loading::before{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--loading);
+    margin: auto;
+    animation: rotating 2s 0.25s linear infinite;
+    z-index: 1;
+}
+
+.contact-sales-btn:hover{
+    transform: scale(1.1);
+}
+
+.contact-sales-btn:focus{
+    outline: 0;
+    border: 4px solid var(--primary-03);
+}
+
+.contact-sales-btn:active{
+    background-color: var(--primary-00);
+    border: none;
+    transform: scale(1.1);
+}
+
+.contact-sales-btn:target{
+    background-color: var(--primary-00);
+    border: none;
+    transform: scale(1.1);
+}
+
+.contact-sales-btn:disabled{
+    background-color: var(--greyscale-03);
+    border: none;
+}
+
+.contact-sales-btn > *{
+    z-index: 1;
+}
+
+.contact-sales-btn::after{
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%) rotate(10deg);
+    transform-origin: top left;
+    transition: background-color .3s ease, border-color .3s ease, color .3s ease, fill .3s ease, transform .3s ease-in-out;
+    will-change: transform;
+    z-index: -1;
+    border-radius: 16px;
+    background-color: var(--greyscale-01);
+}
+
+.contact-sales-btn:hover::after{
+    transform: translateX(0%);
 }
 
 .contact-sales-btn__text{
@@ -359,7 +533,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
 
 .how-works-block__list{
     white-space: nowrap;
-    width: 50%;
+    width: 100%;
     font-weight: 700;
     font-size: 128px;
     line-height: 135.68px;
@@ -371,14 +545,8 @@ h1, h2, h3, h4, h5, h6, p, ul{
     color: var(--greyscale-01);
 }
 
-.animation-wrapper:nth-child(1) > .how-works-block__list:nth-child(1){
-    animation: marquee-right-1 48s linear infinite;
-    animation-delay: -48s;
-}
-
-.animation-wrapper:nth-child(1) > .how-works-block__list:nth-child(2){
-    animation: marquee-right-2 48s linear infinite;
-    animation-delay: -24s;
+.animation-wrapper:nth-child(1) > .how-works-block__list{
+    animation: marquee-right 8s linear infinite;
 }
 
 .animation-wrapper:nth-child(2) > .how-works-block__list{
@@ -386,7 +554,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
 }
 
 .animation-wrapper:nth-child(3) > .how-works-block__list{
-    animation: marquee-right 7s linear infinite;
+    animation: marquee-right 9s linear infinite;
 }
 
 .how-works__phone-block{
