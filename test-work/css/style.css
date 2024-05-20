@@ -53,6 +53,33 @@ html{
     font-weight: 500;
 }
 
+@keyframes marquee-right-1 {
+    0% { 
+        transform: translateX(-100%); 
+    }
+    100% { 
+        transform: translateX(100%); 
+    }
+}
+
+@keyframes marquee-right-2 {
+    0% { 
+        transform: translateX(-200%); 
+    }
+    100% { 
+        transform: translateX(0%); 
+    }
+}
+
+@keyframes marquee-left{
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 h1, h2, h3, h4, h5, h6, p, ul{
     margin: 0;
 }
@@ -316,19 +343,50 @@ h1, h2, h3, h4, h5, h6, p, ul{
     margin: 0 auto;
 }
 
+.animation-wrapper{
+    display: flex;
+    width: 100%;
+}
+
+.animation-wrapper:not(:last-child){
+    margin-bottom: 68px;
+}
+
 .how-works__list-block{
     padding: 46px 0;
+    overflow: hidden;
 }
 
 .how-works-block__list{
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    gap: 20px;
+    white-space: nowrap;
+    width: 50%;
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 135.68px;
+    text-shadow: 1px 1px 0 var(--greyscale-02),
+    -1px -1px 0 var(--greyscale-02),
+    1px -1px 0 var(--greyscale-02),
+    -1px 1px 0 var(--greyscale-02),
+    1px 1px 0 var(--greyscale-02);
+    color: var(--greyscale-01);
 }
 
-.how-works-block__list:not(:last-child){
-    margin-bottom: 68px;
+.animation-wrapper:nth-child(1) > .how-works-block__list:nth-child(1){
+    animation: marquee-right-1 48s linear infinite;
+    animation-delay: -48s;
+}
+
+.animation-wrapper:nth-child(1) > .how-works-block__list:nth-child(2){
+    animation: marquee-right-2 48s linear infinite;
+    animation-delay: -24s;
+}
+
+.animation-wrapper:nth-child(2) > .how-works-block__list{
+    animation: marquee-left 7s linear infinite;
+}
+
+.animation-wrapper:nth-child(3) > .how-works-block__list{
+    animation: marquee-right 7s linear infinite;
 }
 
 .how-works__phone-block{
