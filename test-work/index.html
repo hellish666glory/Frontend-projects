@@ -28,6 +28,24 @@
                     </svg>                    
                 </a>
                 <button class="btn-reset header__btn contact-sales-btn"><span class="contact-sales-btn__text">Contact sales</span></button>
+                <div class="burger-menu">
+                    <input id="toggle" type="checkbox"></input>
+                    <label for="toggle" class="hamburger">
+                        <div class="top-bun"></div>
+                        <div class="meat"></div>
+                        <div class="bottom-bun"></div>
+                    </label>
+                    <div class="nav">
+                        <div class="nav-wrapper">
+                            <nav>
+                                <a href="#">HOME</a><br>
+                                <a href="#">ABOUT</a><br>
+                                <a href="#">WORK</a><br>
+                                <a href="#">SERVICES</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
         <div class="cookie-block visually-hidden">
@@ -48,7 +66,7 @@
                 <div class="banner__content">
                     <h2 class="banner__header">Everyone is an Influencer</h2>
                     <p class="banner__text">Budss is a payments as a service and WOM engine dedicated to acquisition and retention of customers to your business.</p>
-                    <button class="btn-reset contact-sales-btn"><span class="contact-sales-btn__text">Contact sales</span></button>
+                    <button class="btn-reset contact-sales-btn banner__btn"><span class="contact-sales-btn__text">Contact sales</span></button>
                 </div>
                 <div class="banner__woman">
                     <img src="public/woman.png" alt="" class="woman-img">
@@ -178,7 +196,10 @@
                         <div class="why-budss-articles__line">
                             <article class="articles-blocks">
                                 <div class="article-img-block">
-                                    <img src="public/article-img1.png" alt="Иконка телефона" class="article-img">
+                                    <picture class="article-picture">
+                                        <source srcset="public/article-img1-mobile.svg" media="(max-width: 475px)">
+                                        <img src="public/article-img1.png" alt="Иконка телефона" class="article-img">
+                                    </picture>
                                 </div>
                                 <div class="article-text-block">
                                     <h4 class="article__header">Turn your customers into loyal influencers</h3>
@@ -272,7 +293,7 @@
                                         </clipPath>
                                     </defs>
                                 </svg>                            
-                                <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="contacts-icon" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect width="90" height="90" rx="45" fill="#954CED"/>
                                     <g clip-path="url(#clip0_1_8462)">
                                         <path d="M54.8386 22.6354H47.2092V53.4718C47.2092 57.146 44.2749 60.1641 40.6232 60.1641C36.9715 60.1641 34.0371 57.146 34.0371 53.4718C34.0371 49.8634 36.9063 46.9108 40.4276 46.7797V39.0378C32.6677 39.1689 26.4077 45.5331 26.4077 53.4718C26.4077 61.4763 32.7981 67.906 40.6884 67.906C48.5786 67.906 54.969 61.4106 54.969 53.4718V37.6599C57.8382 39.7595 61.3594 41.0061 65.0763 41.0717V33.3297C59.338 33.1329 54.8386 28.409 54.8386 22.6354Z" fill="white"/>
@@ -310,6 +331,15 @@
                         <path opacity="0.7" d="M36.6739 43.2687L26.426 30.8077C25.5017 29.6838 25.5611 28.0471 26.5643 26.9931L37.9158 15.068" stroke="#954CED" stroke-width="8.44412" stroke-linecap="round"/>
                     </svg>                    
                 </a>
+                <div class="mobile-list-block">
+                    <ul class="list-reset mobile-link-list">
+                        <li class="mobile-list-item"><a href="" class="mobile-list-link link-reset">For Business</a></li>
+                        <li class="mobile-list-item"><a href="" class="mobile-list-link link-reset">For Customers</a></li>
+                        <li class="mobile-list-item"><a href="" class="mobile-list-link link-reset">Privacy Policy</a></li>
+                        <li class="mobile-list-item"><a href="" class="mobile-list-link link-reset">Terms Of Use - Seller</a></li>
+                        <li class="mobile-list-item"><a href="" class="mobile-list-link link-reset">Terms of Use - Sellers & Customers</a></li>
+                    </ul>
+                </div>
                 <div class="footer-for-links-block">
                     <a href="" class="footer-for-links link-reset">For Business</a>
                     <a href="" class="footer-for-links link-reset">For Customers</a>
