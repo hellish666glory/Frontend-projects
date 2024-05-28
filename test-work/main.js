@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
     cookieBtns.forEach((btn) => {
         btn.addEventListener('mouseup', () => {
             cookie.classList.add('visually-hidden')
-        })
-    })
+        });
+    });
 
     cookie.classList.remove('visually-hidden');
 
     closeCookie.addEventListener('mouseup', () => {
         cookie.classList.add('visually-hidden');
-    })
+    });
 
     btns.forEach((btn) => {
         btn.addEventListener('mouseup', () => {
@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 btn.classList.remove('btn-loading')
             }, 5000)
-        })
-    })
+        });
+    });
 
     function onScroll(){
         document.addEventListener('scroll', () => {
@@ -38,6 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 pageChooser.classList.remove('visually-hidden');
                 header.classList.remove('fixed');
             }
-        })
+        });
     }
 });

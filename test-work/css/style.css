@@ -408,7 +408,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
     position: absolute;
     bottom: 6.23px;
     right: 28.84px;
-    z-index: 0;
+    z-index: -1;
 }
 
 .banner__figure{
@@ -416,11 +416,11 @@ h1, h2, h3, h4, h5, h6, p, ul{
     width: 2000px;
     left: 820px;
     top: -20px;
-    z-index: -1;
+    z-index: -2;
 }
 
 .banner__content{
-    z-index: 1;
+    z-index: 2;
 }
 
 .banner__header{
@@ -854,6 +854,8 @@ h1, h2, h3, h4, h5, h6, p, ul{
     display: flex;
     color: var(--greyscale-00);
     margin-bottom: 100px;
+    max-width: 1440px;
+    width: 100%;
 }
 
 .your-brands-block{
@@ -961,6 +963,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
 
 .highlighted-text-about{
     position: relative;
+    white-space: nowrap;
 }
 
 .highlighted-text-about::before{
@@ -976,6 +979,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
 
 .highlighted-text-why{
     position: relative;
+    white-space: nowrap;
 }
 
 .highlighted-text-why::before{
