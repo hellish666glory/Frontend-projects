@@ -1012,14 +1012,22 @@ h1, h2, h3, h4, h5, h6, p, ul{
     display: none;
 }
 
+#toggle{
+    display: none;
+}
+
+.burger-menu{
+    display: none;
+}
+
 @media(max-width: 475px){
+
+    .burger-menu{
+        display: block;
+    }
 
     .header-block{
         position: relative;
-    }
-
-    #toggle{
-        display: none;
     }
 
     .hamburger {
@@ -1080,6 +1088,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
         overflow: hidden;
         transition: all 0.3s ease-in-out;
         transform: scale(0);
+        z-index: 4;
     }
       
     .nav-wrapper {
