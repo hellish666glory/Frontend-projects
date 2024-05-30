@@ -10,6 +10,26 @@
     <title>Budss</title>
 </head>
 <body class="body">
+    <div class="modal visually-hidden">
+        <div class="modal__input-block">
+            <label for="name" class="modal_label">Name<span class="required-star">*</span></label>
+            <input placeholder="Enter name" type="text" id="name" class="modal__input input-reset">
+            <label for="email" class="modal_label">Email<span class="required-star">*</span></label>
+            <input placeholder="Enter email" type="email" id="email" class="modal__input input-reset">
+            <label for="phone" class="modal_label">Phone number<span class="required-star">*</span></label>
+            <input type="tel" id="phone" class="modal__input input-reset">
+            <label for="company" class="modal_label">Company</label>
+            <input placeholder="Enter company" type="text" id="company" class="modal__input input-reset">
+            <label for="url" class="modal_label">Website/Store URL</label>
+            <input placeholder="Enter Website/Store URL" type="url" id="url" class="modal__input input-reset">
+        </div>
+        <div class="modal_terms-block">
+            <p class="terms__text">
+                By submitting this form you are agreeing to Budss’s <span class="terms__link">Privacy Policy</span> and <span class="terms__link">Terms of Use</span>
+            </p>
+        </div>
+        <button class="contact-sales-btn btn-reset modal__btn">Contact sales</button>
+    </div>
     <main class="main">
         <div class="choose-page__block">
             <div class="choose-page__link-block container">

@@ -119,6 +119,10 @@ h1, h2, h3, h4, h5, h6, p, ul{
     overflow: hidden;
 }
 
+.input-reset{
+    all: unset;
+}
+
 .btn-reset{
     padding: 0;
     border: none;
@@ -164,8 +168,13 @@ h1, h2, h3, h4, h5, h6, p, ul{
     width: 100%;
 }
 
+.modal{
+    position: fixed;
+    padding: 40px;
+    
+}
+
 .cookie-block{
-    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
