@@ -10,26 +10,46 @@
     <title>Budss</title>
 </head>
 <body class="body">
-    <div class="modal visually-hidden">
+    <div class="modal-backdrop visually-hidden"></div>
+    <form class="modal visually-hidden">
+        <svg class="close-modal" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="26" height="26" rx="13" fill="white"/>
+            <path d="M12.9998 13L16.5353 16.5355M9.46424 16.5355L12.9998 13L9.46424 16.5355ZM16.5353 9.46447L12.9998 13L16.5353 9.46447ZM12.9998 13L9.46424 9.46447L12.9998 13Z" stroke="#B9B9B9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
         <div class="modal__input-block">
-            <label for="name" class="modal_label">Name<span class="required-star">*</span></label>
-            <input placeholder="Enter name" type="text" id="name" class="modal__input input-reset">
-            <label for="email" class="modal_label">Email<span class="required-star">*</span></label>
-            <input placeholder="Enter email" type="email" id="email" class="modal__input input-reset">
-            <label for="phone" class="modal_label">Phone number<span class="required-star">*</span></label>
-            <input type="tel" id="phone" class="modal__input input-reset">
-            <label for="company" class="modal_label">Company</label>
-            <input placeholder="Enter company" type="text" id="company" class="modal__input input-reset">
-            <label for="url" class="modal_label">Website/Store URL</label>
-            <input placeholder="Enter Website/Store URL" type="url" id="url" class="modal__input input-reset">
+            <label for="name" class="modal_label">
+                <span class="label__text">Name <span class="required-star">*</span></span>
+                <input placeholder="Enter name" type="text" id="name" class="modal__input input-reset required">
+                <div class="alert-block"></div>
+            </label>
+            <label for="email" class="modal_label">
+                <span class="label__text">Email <span class="required-star">*</span></span>
+                <input placeholder="Enter email" type="email" id="email" class="modal__input input-reset required">
+                <div class="alert-block"></div>
+            </label>
+            <label for="phone" class="modal_label">
+                <span class="label__text">Phone number <span class="required-star">*</span></span>
+                <input placeholder="+7 (999) 999-99-99" type="tel" id="phone" class="modal__input input-reset required">
+                <div class="alert-block"></div>
+            </label>
+            <label for="company" class="modal_label">
+                <span class="label__text">Company</span>
+                <input placeholder="Enter company" type="text" id="company" class="modal__input input-reset">
+                <div class="alert-block"></div>
+            </label>
+            <label for="url" class="modal_label">
+                <span class="label__text">Website/Store URL</span>
+                <input placeholder="Enter Website/Store URL" type="text" id="url" class="modal__input input-reset">
+                <div class="alert-block"></div>
+            </label>
         </div>
         <div class="modal_terms-block">
             <p class="terms__text">
-                By submitting this form you are agreeing to Budss’s <span class="terms__link">Privacy Policy</span> and <span class="terms__link">Terms of Use</span>
+                By submitting this form you are agreeing to Budss’s <a href="" class="terms__link">Privacy Policy</a> and <a href="" class="terms__link">Terms of Use</a>
             </p>
         </div>
-        <button class="contact-sales-btn btn-reset modal__btn">Contact sales</button>
-    </div>
+        <button class="contact-sales-btn btn-reset modal__btn"><span class="contact-sales-btn__text">Contact sales</span></button>
+    </form>
     <main class="main">
         <div class="choose-page__block">
             <div class="choose-page__link-block container">
@@ -47,7 +67,7 @@
                         <path opacity="0.7" d="M36.6737 40.7686L26.4257 28.3075C25.5015 27.1837 25.5608 25.547 26.5641 24.493L37.9155 12.5679" stroke="#A64CED" stroke-width="8.44412" stroke-linecap="round"/>
                     </svg>                    
                 </a>
-                <button class="btn-reset header__btn contact-sales-btn"><span class="contact-sales-btn__text">Contact sales</span></button>
+                <button class="btn-reset header__btn contact-sales-btn contact-sales-btn-load"><span class="contact-sales-btn__text">Contact sales</span></button>
                 <div class="burger-menu">
                     <input id="toggle" type="checkbox"></input>
                     <label for="toggle" class="hamburger">
@@ -56,6 +76,7 @@
                         <div class="bottom-bun"></div>
                     </label>
                     <div class="nav">
+                        <button class="contact-sales-btn contact-sales-btn-load btn-reset mobile-btn"><span class="contact-sales-btn__text">Contact sales</span></button>
                         <div class="mobile-list-block">
                             <ul class="list-reset mobile-link-list">
                                 <li class="mobile-list-item"><a href="" class="mobile-list-link link-reset">For Business</a></li>
@@ -87,7 +108,7 @@
                 <div class="banner__content">
                     <h2 class="banner__header">Everyone is an Influencer</h2>
                     <p class="banner__text">Budss is a payments as a service and WOM engine dedicated to acquisition and retention of customers to your business.</p>
-                    <button class="btn-reset contact-sales-btn banner__btn"><span class="contact-sales-btn__text">Contact sales</span></button>
+                    <button class="btn-reset contact-sales-btn contact-sales-btn-load banner__btn"><span class="contact-sales-btn__text">Contact sales</span></button>
                 </div>
                 <div class="banner__woman">
                     <picture class="woman-picture">
@@ -271,7 +292,7 @@
                 <div class="container">
                     <div class="buisiness-grow-block">
                         <h3 class="buisiness-grow-header">Let Your Business Grow</h3>
-                        <button class="btn-reset buisiness-grow-btn contact-sales-btn"><span class="contact-sales-btn__text">Contact sales</span></button>
+                        <button class="btn-reset buisiness-grow-btn contact-sales-btn contact-sales-btn-load"><span class="contact-sales-btn__text">Contact sales</span></button>
                     </div>
                     <div class="your-brands-container">
                         <div class="your-brands-block">
@@ -369,7 +390,7 @@
                     <a href="" class="footer-for-links link-reset">For Customers</a>
                 </div>
                 <div class="footer-btn-block">
-                    <button class="btn-reset footer-btn contact-sales-btn"><span class="contact-sales-btn__text">Contact sales</span></button>
+                    <button class="btn-reset footer-btn contact-sales-btn contact-sales-btn-load"><span class="contact-sales-btn__text">Contact sales</span></button>
                     <div class="stores-block">
                         <a href="" class="store-link link-reset"><img src="public/appstore.png" alt="" class="store-img"></a>
                         <a href="" class="store-link link-reset"><img src="public/googleplay.png" alt="" class="store-img"></a>
