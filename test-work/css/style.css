@@ -119,6 +119,10 @@ h1, h2, h3, h4, h5, h6, p, ul{
     overflow: hidden;
 }
 
+.none{
+    display: none !important;
+}
+
 .input-reset{
     all: unset;
 }
@@ -168,6 +172,31 @@ h1, h2, h3, h4, h5, h6, p, ul{
     width: 100%;
 }
 
+.thank-you__modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.thank-you__modal button{
+    width: 100%;
+}
+
+.thank-you__header{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 45.36px;
+    color: var(--primary-02);
+}
+
+.thank-you__text{
+    font-size: 24px;
+    line-height: 28.8px;
+    max-width: 345px;
+    color: var(--greyscale-02)
+}
+
 .modal-backdrop{
     position: fixed;
     background-color: rgba(0, 0, 0, .2);
@@ -183,21 +212,17 @@ h1, h2, h3, h4, h5, h6, p, ul{
     padding: 40px;
     background-color: var(--greyscale-07);
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
     z-index: 10000;
     left: 50%;
     top: 56px;
     transform: translate(-50%);
-    max-width: 417px;
-    gap: 20px;
-    opacity: 0;
-    animation: reveal 1s forwards; 
 }
 
-@keyframes reveal{
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+.modal__form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 337px;
 }
 
 .close-modal{
@@ -226,6 +251,12 @@ h1, h2, h3, h4, h5, h6, p, ul{
     font-size: 14px;
     line-height: 22px;
     color: #070707;
+}
+
+.fill-in-text{
+    font-size: 16px;
+    line-height: 20.16px;
+    color: var(--additional-02);
 }
 
 .disabled{
@@ -336,21 +367,16 @@ h1, h2, h3, h4, h5, h6, p, ul{
     border-radius: 16px;
     z-index: 100;
     bottom: 30px;
-    left: 27.15%;
-    animation: ani 2s forwards;
+    left: 50%;
+    transform: translateX(-50%);
 }
-
-@keyframes ani {
-    0% {transform: translateY(150%);}
-    100% {transform: translateY(0);}
-  }
 
 .cookie__text{
     max-width: 783px;
     width: 100%;
     color: #383838;
     font-weight: 300;
-    font-size: 20;
+    font-size: 20px;
     line-height: 28px;
 }
 
@@ -358,11 +384,15 @@ h1, h2, h3, h4, h5, h6, p, ul{
     margin-right: 30px;
 }
 
+.cookie__btn:not(:last-child){
+    margin-right: 30px;
+}
+
 .cookie__btn{
     overflow: hidden;
     position: relative;
     font-weight: 600;
-    font-size: 20;
+    font-size: 20px;
     line-height: 25.2px;
     padding: 16px 30px;
     border-radius: 16px;
@@ -411,15 +441,12 @@ h1, h2, h3, h4, h5, h6, p, ul{
     background-color: var(--greyscale-01);
 }
 
-.cookie__btn:not(:last-child){
-    margin-right: 20px;
-}
-
 .close-cookie{
     position: absolute;
     top: 16px;
     right: 16px;
     cursor: pointer;
+    z-index: -1;
 }
 
 .choose-page__block{
@@ -641,6 +668,12 @@ h1, h2, h3, h4, h5, h6, p, ul{
 .about-block__list{
     display: flex;
     flex-wrap: wrap;
+}
+
+.about-block__item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .about-block__item:nth-child(1){
@@ -1027,6 +1060,8 @@ h1, h2, h3, h4, h5, h6, p, ul{
 
 .your-brands-container{
     display: flex;
+    justify-content: center;
+    margin: 0 auto;
     color: var(--greyscale-00);
     margin-bottom: 100px;
     max-width: 1440px;
@@ -1039,7 +1074,6 @@ h1, h2, h3, h4, h5, h6, p, ul{
 }
 
 .your-brands-header{
-    width: 822px;
     font-weight: 700;
     font-size: 96px;
     line-height: 101.76px;
@@ -1074,7 +1108,6 @@ h1, h2, h3, h4, h5, h6, p, ul{
 
 .brands__line{
     display: flex;
-    overflow: hidden;
     justify-content: center;
 }
 
@@ -1187,6 +1220,34 @@ h1, h2, h3, h4, h5, h6, p, ul{
 }
 
 @media(max-width: 475px){
+    .cookie-block{
+        flex-direction: column;
+        padding: 30px 20px;
+        max-width: 335px;
+        gap: 40px;
+        bottom: 20px;
+    }
+
+    .cookie-btn__block{
+        width: 100%;
+        margin: 0;
+    }
+
+    .cookie__btn:not(:last-child){
+        margin-bottom: 30px;
+    }
+
+    .cookie__btn{
+        width: 100%;
+    }
+
+    .modal{
+        padding: 20px 16px;
+    }
+
+    .modal__btn{
+        width: 100%;
+    }
 
     .burger-menu{
         display: block;

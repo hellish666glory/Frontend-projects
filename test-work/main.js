@@ -7,18 +7,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeCookie = document.querySelector('.close-cookie');
     const cookieBtns = document.querySelectorAll('.cookie__btn');
     const burgerOpener = document.querySelector('#toggle');
-    const modal = document.querySelector('.modal');
-    const invalidText = document.createElement('span');
+    const modal = document.querySelector('.modal')
+    const modalForm = document.querySelector('.modal__form');
     const closeModal = document.querySelector('.close-modal');
     const modalBackdrop = document.querySelector('.modal-backdrop')
-    invalidText.classList.add('invalid-text');
-    invalidText.textContent += 'This field is required.'
+    const thxBlock = document.querySelector('.thank-you__modal')
     revealElement(cookie);
 
     closeModal.addEventListener('mouseup', () => {
         hideElement(modal);
-        hideElement(modalBackdrop)
+        hideElement(modalBackdrop);
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach((input) => {
+            input.value = ''
+            input.classList.remove('invalid');
+        })
+        const invalidText = document.querySelectorAll('.invalid-text');
+        invalidText.forEach((text) => {
+            text.remove();
+        })
     })
+
+
 
     function hideElement(elem){
         elem.classList.add('visually-hidden');
@@ -63,24 +73,67 @@ document.addEventListener('DOMContentLoaded', () => {
                         text.classList.remove('disabled');
                     }
                 })
-                modal.addEventListener('submit', (e) => {
+                const inputBlock = modalForm.querySelector('.modal__input-block');
+                const insertText = document.createElement('span');
+                insertText.classList.add('fill-in-text')
+                insertText.textContent += 'Please fill in all required fields'
+                modalForm.addEventListener('submit', (e) => {
                     e.preventDefault();
-                    const labels = document.querySelectorAll('.modal_label');
-                    labels.forEach((label) => {
-                        const input = label.querySelector('input');
-                        const alertBlock = label.querySelector('.alert-block');
-                        if (input.classList.contains('required') && input.value.trim() === ""){
-                            alertBlock.append(invalidText);
-                            input.classList.add('invalid');
-                        } if (input.classList.contains('required') && !(input.value.trim() === ""))  {
-                            input.classList.remove('invalid');
-                            invalidText.remove();
+                    validator();
+                    if (!validator() && !document.querySelector('.fill-in-text')){
+                        inputBlock.append(insertText);
+                    } 
+                    if (validator() && document.querySelector('.fill-in-text')) {
+                        insertText.remove();
+                    }
+                    if (validator()){
+                        hideElement(modalForm);
+                        thxBlock.classList.remove('none');
+                        const superBtn = document.querySelector('#super');
+                        superBtn.addEventListener('mouseup', () => {
+                            hideElement(modal);
+                            hideElement(modalBackdrop);
+                        })
+                    }
+                })
+                const validatorInputs = modalForm.querySelectorAll('input');
+                validatorInputs.forEach((input) => {
+                    input.addEventListener('input', () => {
+                        validator();
+                        if (!validator() && !document.querySelector('.fill-in-text')){
+                            inputBlock.append(insertText);
+                        } 
+                        if (validator() && document.querySelector('.fill-in-text')) {
+                            insertText.remove();
                         }
                     })
                 })
             }, 2000)
         });
     });
+
+    function validator(){
+        modalBtn = modalForm.querySelector('button');
+        const labels = document.querySelectorAll('.modal_label');
+        let allInputsFilled = false;
+        labels.forEach((label) => {
+            let input = label.querySelector('input');
+            let invalidText = label.querySelector('.invalid-text')
+            if (input.classList.contains('required') && input.value.trim() === ""){
+                revealElement(invalidText);
+                input.classList.add('invalid');
+                modalBtn.disabled = true;
+                allInputsFilled = false;
+            } if (input.classList.contains('required') && !(input.value.trim() === ""))  {
+                input.classList.remove('invalid');
+                hideElement(invalidText);
+                modalBtn.disabled = false;
+                allInputsFilled = true;
+            }
+        })
+
+        return allInputsFilled;
+    }
 
     function onScroll(){
         document.addEventListener('scroll', () => {
