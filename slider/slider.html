@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider</title>
+  <style>
+    .slider {
+      width: 500px;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      position: absolute;
+      top: 0;
+    }
+
+    .slide.active {
+      display: block;
+      right: -500px;
+      z-index: 1;
+    }
+
+    .slide.previous {
+      display: block;
+      z-index: 0;
+    }
+
+    .navigation {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    button {
+      margin: 0 5px;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #333;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .active-dot {
+      background-color: #ff0000;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <img src="https://catherineasquithgallery.com/uploads/posts/2021-02/1612275781_153-p-kot-na-fioletovom-fone-186.jpg" class="slide previous">
+    <img src="https://i.artfile.ru/3000x2000_844381_[www.ArtFile.ru].jpg" class="slide">
+    <img src="https://catherineasquithgallery.com/uploads/posts/2021-02/1614282221_80-p-chernii-fon-laika-98.jpg" class="slide">
+  </div>
+  <div class="navigation">
+    <button onclick="changeSlide(-1)">Prev</button>
+    <div class="dots"></div>
+    <button onclick="changeSlide(1)">Next</button>
+  </div>
+  <script defer>
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.querySelector('.dots');
+    let isAnimating = false;
+
+    let currentSlide = 0;
+
+    let start = Date.now();
+
+    document.addEventListener('DOMContentLoaded', () => {
+      updateDots();
+    });
+
+    function animate(slide, range, x){
+      let start = Date.now();
+      let timer = setInterval( () => {
+        let timePassed = Date.now() - start;
+
+        switch(x){
+          case 1: 
+          slide.style.marginRight = timePassed / range + 'px';
+          break;
+          case 2:
+          slide.style.right = timePassed / range + 'px';
+          break;
+        }
+
+        if (timePassed >= 1000) {
+        clearInterval(timer);
+        return;
+        }
+      }, 10);
+    }
+
+    function showSlide(n) {
+      if (isAnimating || n === currentSlide) {
+        return;
+      }
+
+      isAnimating = true;
+
+      slides[currentSlide].classList.remove('active');
+      slides[currentSlide].classList.add('previous');
+      slides[currentSlide].style.marginRight = null;
+      slides[currentSlide].style.right = null;
+      slides[n].style.marginRight = null;
+      slides[n].style.right = null;
+      slides[n].classList.add('active');
+
+      animate(slides[n], 2, 1);
+      animate(slides[currentSlide], 2, 2);
+
+      setTimeout(() => {
+        slides[currentSlide].classList.remove('previous');
+        currentSlide = n;
+        isAnimating = false;
+        updateDots();
+      }, 1000);
+    }
+
+    function changeSlide(n) {
+      const nextSlide = (currentSlide + n + slides.length) % slides.length;
+      showSlide(nextSlide);
+    }
+
+    function updateDots() {
+      dotsContainer.innerHTML = '';
+      slides.forEach((slide, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (index === currentSlide) {
+          dot.classList.add('active-dot');
+        }
+        dot.addEventListener('click', () => showSlide(index));
+        dotsContainer.appendChild(dot);
+      });
+    }
+
+    showSlide(currentSlide);
+  </script>
+</body>
+</html>
