@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
     align-items: center;
     margin-right: 85px;
     overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-y: visible;
     scrollbar-width: none;
 }
 
@@ -96,6 +96,8 @@ h1, h2, h3, h4, h5, h6, p, ul{
     display: flex;
     flex-direction: row;
     gap: 85px;
+    overflow: visible;
+    padding: 10px;
 }
 
 .nav-list-item{
@@ -104,10 +106,12 @@ h1, h2, h3, h4, h5, h6, p, ul{
     font-size: 18px;    
     line-height: 21.94px;
     transition: color .3s ease-in-out;
+    overflow: visible;
 }
 
 .nav-item-link{
     white-space: nowrap;
+    overflow: visible;
 }
 
 .nav-item-link:focus{   
