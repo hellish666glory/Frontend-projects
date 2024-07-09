@@ -1,0 +1,628 @@
+@font-face {
+    font-family: 'DIN Pro Cond';
+    src: local('DIN Pro Condensed Black'), local('DINPro-CondensedBlack'),
+        url('../fonts/DINPro-CondensedBlack.woff2') format('woff2'),
+        url('../fonts/DINPro-CondensedBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: local('DIN Pro Light'), local('DINPro-Light'),
+        url('../fonts/DINPro-Light.woff2') format('woff2'),
+        url('../fonts/DINPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: local('DIN Pro'), local('DINPro'),
+        url('../fonts/DINPro.woff2') format('woff2'),
+        url('../fonts/DINPro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: local('DIN Pro Bold Italic'), local('DINPro-BoldItalic'),
+        url('../fonts/DINPro-BoldItalic.woff2') format('woff2'),
+        url('../fonts/DINPro-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: local('DIN Pro Bold'), local('DINPro-Bold'),
+        url('../fonts/DINPro-Bold.woff2') format('woff2'),
+        url('../fonts/DINPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Pro Cond';
+    src: local('DIN Pro Condensed Bold Italic'), local('DINPro-CondensedBoldItalic'),
+        url('../fonts/DINPro-CondensedBoldItalic.woff2') format('woff2'),
+        url('../fonts/DINPro-CondensedBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: local('DIN Pro Medium Italic'), local('DINPro-MediumItalic'),
+        url('../fonts/DINPro-MediumItalic.woff2') format('woff2'),
+        url('../fonts/DINPro-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: local('DIN Pro Black'), local('DINPro-Black'),
+        url('../fonts/DINPro-Black.woff2') format('woff2'),
+        url('../fonts/DINPro-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Pro Cond';
+    src: local('DIN Pro Condensed Medium'), local('DINPro-CondensedMedium'),
+        url('../fonts/DINPro-CondensedMedium.woff2') format('woff2'),
+        url('../fonts/DINPro-CondensedMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Pro Cond';
+    src: local('DIN Pro Condensed Light'), local('DINPro-CondensedLight'),
+        url('../fonts/DINPro-CondensedLight.woff2') format('woff2'),
+        url('../fonts/DINPro-CondensedLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: local('DIN Pro Medium'), local('DINPro-Medium'),
+        url('../fonts/DINPro-Medium.woff2') format('woff2'),
+        url('../fonts/DINPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: local('DIN Pro Italic'), local('DINPro-Italic'),
+        url('../fonts/DINPro-Italic.woff2') format('woff2'),
+        url('../fonts/DINPro-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DIN Pro Cond';
+    src: local('DIN Pro Condensed Light Italic'), local('DINPro-CondensedLightItalic'),
+        url('../fonts/DINPro-CondensedLightItalic.woff2') format('woff2'),
+        url('../fonts/DINPro-CondensedLightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DIN Pro Cond';
+    src: local('DIN Pro Condensed Medium Italic'), local('DINPro-CondensedMediumItalic'),
+        url('../fonts/DINPro-CondensedMediumItalic.woff2') format('woff2'),
+        url('../fonts/DINPro-CondensedMediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DIN Pro Cond';
+    src: local('DIN Pro Condensed Black Italic'), local('DINPro-CondensedBlackItalic'),
+        url('../fonts/DINPro-CondensedBlackItalic.woff2') format('woff2'),
+        url('../fonts/DINPro-CondensedBlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DIN Pro Cond';
+    src: local('DIN Pro Condensed Bold'), local('DINPro-CondensedBold'),
+        url('../fonts/DINPro-CondensedBold.woff2') format('woff2'),
+        url('../fonts/DINPro-CondensedBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: local('DIN Pro Black Italic'), local('DINPro-BlackItalic'),
+        url('../fonts/DINPro-BlackItalic.woff2') format('woff2'),
+        url('../fonts/DINPro-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: local('DIN Pro Light Italic'), local('DINPro-LightItalic'),
+        url('../fonts/DINPro-LightItalic.woff2') format('woff2'),
+        url('../fonts/DINPro-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DIN Pro Cond';
+    src: local('DIN Pro Condensed Italic'), local('DINPro-CondensedItalic'),
+        url('../fonts/DINPro-CondensedItalic.woff2') format('woff2'),
+        url('../fonts/DINPro-CondensedItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DIN Pro Cond';
+    src: local('DIN Pro Condensed Regular'), local('DINPro-CondensedRegular'),
+        url('../fonts/DINPro-CondensedRegular.woff2') format('woff2'),
+        url('../fonts/DINPro-CondensedRegular.woff') format('woff'),;
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    box-sizing: border-box;
+}
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul{
+    margin: 0; 
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.input-reset{
+    all: unset;
+}
+
+.btn-reset{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.link-reset{
+    color: inherit;
+    text-decoration: none;
+}
+
+.body{
+    font-family: 'DIN Pro', sans-serif;
+    margin: 0;
+    padding-top: 36px;
+}
+
+.container{
+    position: relative;
+    max-width: 1824px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 93px;
+    padding-top: 86px;
+    padding-left: 83px;
+    background-color: #F8F8F8;
+    border-radius: 22px;
+    min-height: 801px;
+}
+
+.container__figure{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.container__header{
+    z-index: 1;
+}
+
+.header__text{
+    font-family: 'DIN Pro Cond';
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 68px;
+    color: #19192B;
+}
+
+.turqoise-text{
+    color: #41B4B4;
+}
+
+.steps__container{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 22.2px;
+    margin-bottom: 95.54px;
+}
+
+.step{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding-top: 32px;
+    padding-left: 40px;
+    background-color: #FFFFFF;
+    border-radius: 27.75px;
+    z-index: 1;
+    width: 100%;
+}
+
+.step:nth-child(1){
+    margin-bottom: 113px;
+    margin-right: 97.36px;
+    max-width: 477px;
+    max-height: 231.61px;
+}
+
+.step__arrow{
+    position: absolute;
+}
+
+.step:nth-child(1) .step__arrow{
+    right: -97.36px;
+    bottom: 109.5px;
+} 
+
+.step:nth-child(2)::before{
+    position: absolute;
+    content: "";
+    background-image: url(../public/arrow-line.png);
+    background-position: center;
+    height: 27.4px;
+    width: 2.77px;
+    bottom: -27.4px;
+    left: 131.5px;
+    background-repeat: no-repeat;
+}
+
+.step:nth-child(3) .step__arrow{
+    right: -162.36px;
+    top: -59.76px;
+} 
+
+.step:nth-child(3)::before{
+    position: absolute;
+    content: "";
+    background-image: url(../public/arrow.svg);
+    background-position: center;
+    height: 40px;
+    width: 10px;
+    top: -60px;
+    left: 192px;
+    background-repeat: no-repeat;
+}
+
+.step:nth-child(3)::after{
+    position: absolute;
+    content: "";
+    background-image: url(../public/end-arrow.svg);
+    background-position: center;
+    height: 40px;
+    width: 98px;
+    top: 50%;
+    right: -98.5px;
+    background-repeat: no-repeat;
+}
+
+.step:nth-child(2){
+    margin-bottom: 87.08px;
+    max-width: 632.42px;
+    max-height: 264.15px;
+}
+
+.step:nth-child(3){
+    margin-right: 99.93px;
+    max-width: 546.81px;
+    max-height: 240.72px;
+}
+
+.step:nth-child(4){
+    max-width: 560.05px;
+    max-height: 249.14px;
+    bottom: -15px;
+}
+
+.step__mark{
+    position: absolute;
+    border-radius: 49.95px;
+    padding: 1.62px 13.23px 3.2px 12.48px;
+    background-color: #41B4B4;
+    left: 32px;
+    top: -15px;
+}
+
+.step:nth-child(4) .step__mark{
+    padding: 15.16px 11.93px 13.66px 11.93px;
+    top: -35px;
+}
+
+.mark__number{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+.step__media{
+    position: absolute; 
+}
+
+.step:nth-child(2) .step__media{
+    right: 16.11px;
+    bottom: -11.64px;
+}
+
+.step:nth-child(3) .step__media{
+    bottom: 25.72px;
+    right: 37.81px;
+}
+
+.step:nth-child(4) .step__media{
+    right: 0;
+    bottom: -9.72px;
+}
+
+.step:nth-child(2) .step__img{
+    max-width: 206.16px;
+}
+
+.step:nth-child(3) .step__img{
+    max-width: 127px;
+}
+
+.step:nth-child(4) .step__img{
+    max-width: 211.13px;
+}
+
+.step__header{
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 30.8px;
+    max-width: 378px;
+    color: #373737;
+    margin-bottom: 12px;
+}
+
+.step__text{
+    color: #19192B;
+    max-width: 296px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+@media (max-width: 1690px){
+
+    .container{
+        justify-content: space-around;
+        padding-top: 60px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .steps__container{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        max-width: 700px;
+        gap: 50px;
+        width: 100%;
+    }
+
+    .step{
+        margin: 0 !important;
+        padding: 32px 40px;
+    }
+
+    .step__arrow{
+        display: none;
+    }
+
+    .step:nth-child(2)::before{
+        display: none;
+    }
+
+    .step:nth-child(3)::after{
+        display: none;
+    }
+
+    .step:nth-child(3)::before{
+        display: none;
+    }
+
+    
+    .step:nth-child(4) .step__img{
+        max-width: 155.13px;
+    }
+
+}
+
+@media (max-width: 990px){
+
+    .container__figure{
+        max-width: 80%;
+    }
+    
+    .step__media{
+        display: none;
+    }
+
+    .step__header{
+        font-size: 20px;
+    }
+
+    .step__text{
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 790px){
+
+    .container__figure{
+        display: none;
+    }
+
+    .step__header{
+        font-size: 18px;
+    }
+
+    .step__text{
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 696px){
+
+    .header__text{
+        font-size: 30px;
+        line-height: 16px;
+    }
+
+    .step__header{
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .step__text{
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+@media(max-width: 600px){
+
+    .body{
+        background-color: #F8F8F8;
+        padding-top: 0;
+    }
+
+    .container{
+        flex-direction: column;
+        gap: 24px;
+        padding: 44px 0;
+        /* align-items: center; */
+        max-width: 288px;
+    }
+
+    .header__text{
+        font-size: 21px;
+        line-height: 24px;
+    }
+
+    .turqoise-text{
+        color: inherit;
+    }
+
+    .steps__container{
+        margin-bottom: 0;
+    }
+
+    .step__mark{
+        padding: 3.62px 14.23px 6.2px 13.48px;
+        top: -13px;
+    }
+
+    .mark__number{
+        font-size: 12px;
+        line-height: 15.6px;
+    }
+
+    .step{
+        padding: 32px 20px;
+    }
+
+    .step:nth-child(4){
+        bottom: 0;
+    }
+
+    .step:not(:first-child) .step__text{
+        max-width: 148px;
+    }
+
+    .step:nth-child(2) .step__img{
+        max-width: 90px;
+    }
+    
+    .step:nth-child(3) .step__img{
+        max-width: 60px;
+    }
+    
+    .step:nth-child(4) .step__img{
+        max-width: 90px;
+    }
+
+    .step:nth-child(2) .step__media{
+        right: 20px;
+        bottom: 26px;
+    }
+    
+    .step:nth-child(3) .step__media{
+        bottom: 41px;
+        right: 35px;
+    }
+    
+    .step:nth-child(4) .step__media{
+        bottom: 22.57px;
+        right: 20px;
+    }
+
+    .step__media{
+        display: block;
+    }
+
+    .step:nth-child(4) .step__mark{
+        padding: 7.66px 6.93px 6.16px 6.4px;
+        top: -18px;
+    }
+
+    .tick-svg{
+        width: 19px;
+        height: 15px;
+    }
+
+
+
+}
