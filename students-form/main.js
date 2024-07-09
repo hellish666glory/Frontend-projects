@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         else if (startDateInput.value >= new Date().getFullYear() && new Date().getMonth() < 8){
             removeAlert();
             validationAlertBlock.append(validationAlert);
-            validationAlert.textContent += ' Этот учебный год еще начался';
+            validationAlert.textContent += ' Этот учебный год еще не начался';
             return
         }
         else if (facultySelect.value === ''){
