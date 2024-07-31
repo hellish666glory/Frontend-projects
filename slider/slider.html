@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Slider</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <style>
     .slider {
       width: 500px;
@@ -20,15 +21,18 @@
       top: 0;
     }
 
-    .slide.active {
+    .slide.active-right {
       display: block;
       right: -500px;
-      z-index: 1;
+    }
+
+    .slide.active-left {
+      display: block;
+      left: -500px;
     }
 
     .slide.previous {
       display: block;
-      z-index: 0;
     }
 
     .navigation {
@@ -57,9 +61,12 @@
 </head>
 <body>
   <div class="slider">
-    <img src="https://catherineasquithgallery.com/uploads/posts/2021-02/1612275781_153-p-kot-na-fioletovom-fone-186.jpg" class="slide previous">
-    <img src="https://i.artfile.ru/3000x2000_844381_[www.ArtFile.ru].jpg" class="slide">
-    <img src="https://catherineasquithgallery.com/uploads/posts/2021-02/1614282221_80-p-chernii-fon-laika-98.jpg" class="slide">
+    <img src="https://avatars.mds.yandex.net/i?id=6b1fe3da991b1dd3727c08c5e7182f98_l-4575600-images-thumbs&n=13" class="slide previous">
+    <img src="https://avatars.mds.yandex.net/i?id=905ddc4ffc1ff628b779c9b2661afa02_l-5312449-images-thumbs&n=13" class="slide">
+    <img src="https://avatars.mds.yandex.net/i?id=6f064b1de4ef81dc467c6e68fda0c46f_l-5480371-images-thumbs&n=13" class="slide">
+    <img src="https://img1.akspic.ru/attachments/crops/6/5/7/1/21756/21756-gornyj_relef-gornyj_hrebet-utro-hrebet-gora-3840x2160.jpg" class="slide">
+    <img src="https://s1.1zoom.ru/big7/18/Scenery_Mountains_Parks_356732.jpg" class="slide">
+    <img src="https://get.wallhere.com/photo/landscape-mountains-lake-nature-reflection-grass-sky-river-national-park-valley-wilderness-Alps-tree-autumn-leaf-mountain-season-tarn-loch-mountainous-landforms-mountain-range-590185.jpg" class="slide">
   </div>
   <div class="navigation">
     <button onclick="changeSlide(-1)">Prev</button>
@@ -79,20 +86,33 @@
       updateDots();
     });
 
-    function animate(slide, range, x){
+    function animate(slide, range, direction, x){
       let start = Date.now();
       let timer = setInterval( () => {
         let timePassed = Date.now() - start;
 
-        switch(x){
-          case 1: 
-          slide.style.marginRight = timePassed / range + 'px';
+        switch (direction){
+          case 'right':
+            switch(x){
+              case 1: 
+              slide.style.marginRight = timePassed / range + 'px';
+              break;
+              case 2:
+              slide.style.right = timePassed / range + 'px';
+              break;
+          }
           break;
-          case 2:
-          slide.style.right = timePassed / range + 'px';
+          case 'left':
+            switch(x){
+              case 1: 
+              slide.style.marginLeft = timePassed / range + 'px';
+              break;
+              case 2:
+              slide.style.left = timePassed / range + 'px';
+              break;
+          }
           break;
         }
-
         if (timePassed >= 1000) {
         clearInterval(timer);
         return;
@@ -100,24 +120,41 @@
       }, 10);
     }
 
-    function showSlide(n) {
+    function showSlide(n, direction) {
       if (isAnimating || n === currentSlide) {
         return;
       }
 
       isAnimating = true;
 
-      slides[currentSlide].classList.remove('active');
+      slides[currentSlide].classList.remove('active-right');
+      slides[currentSlide].classList.remove('active-left');
       slides[currentSlide].classList.add('previous');
       slides[currentSlide].style.marginRight = null;
       slides[currentSlide].style.right = null;
       slides[n].style.marginRight = null;
       slides[n].style.right = null;
-      slides[n].classList.add('active');
+      slides[currentSlide].style.marginLeft = null;
+      slides[currentSlide].style.left = null;
+      slides[n].style.marginLeft = null;
+      slides[n].style.left = null;
 
-      animate(slides[n], 2, 1);
-      animate(slides[currentSlide], 2, 2);
-
+      if (direction === 'left' || (n < currentSlide && !(currentSlide - n > 1))){
+        animate(slides[n], 2, 'left', 1);
+        animate(slides[currentSlide], 2, 'left', 2);
+        slides[n].classList.add('active-left');
+      }
+      if (direction === 'right' || (n > currentSlide)){
+        animate(slides[n], 2, 'right', 1);
+        animate(slides[currentSlide], 2, 'right', 2);
+        slides[n].classList.add('active-right');
+      }
+      if (direction === undefined && currentSlide - n > 1){
+        animate(slides[n], 2, 'left', 1);
+        animate(slides[currentSlide], 2, 'left', 2);
+        slides[n].classList.add('active-left');
+      }
+      
       setTimeout(() => {
         slides[currentSlide].classList.remove('previous');
         currentSlide = n;
@@ -127,8 +164,19 @@
     }
 
     function changeSlide(n) {
+      let direction = 0;
+
+      switch (n){
+        case 1:
+          direction = 'right';
+          break;
+        case -1:
+          direction = 'left';
+          break;
+      }
+
       const nextSlide = (currentSlide + n + slides.length) % slides.length;
-      showSlide(nextSlide);
+      showSlide(nextSlide, direction);
     }
 
     function updateDots() {
