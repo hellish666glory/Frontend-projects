@@ -13,14 +13,55 @@
     <script defer>
         document.addEventListener('DOMContentLoaded', () => {
             const countryIcons = document.querySelectorAll('.country-icon');
+            const mainContainer = document.querySelector('.main__background__countries');
+            let delay = 3000;
+            function startSpinning() {
+                mainContainer.style.animation = 'spin 20s linear infinite';
+                countryIcons.forEach(icon => {
+                    icon.style.animation = 'counter-spin 20s linear infinite';
+                });
+            }
             setTimeout(() => {
                 countryIcons.forEach((icon, index) => {
                     setTimeout(() => {
                         icon.classList.remove('initial');
-                    }, 400 * index)
-                })
-            }, 3000)
-        })
+                    }, 400 * index); // Stagger the removal of 'initial' class
+                });
+                setTimeout(() => {
+                    startSpinning();
+                }, 400 * countryIcons.length + 1000);
+            }, delay);
+        });
+    </script>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', ()=> {
+            const input = document.querySelector('.search__input')
+            const validationArray = ['!','@','#','$','%','^','&','*','(', ')']
+            input.addEventListener('input',() => {
+                for (char of validationArray){
+                    if (validationArray.includes(input.value.slice(-1))){
+                        input.value = input.value.replace(char, '')
+                    }
+                }
+            })
+    })
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const bannerText = document.querySelector('.banner__text');
+    
+            try {
+                const response = await fetch('https://baconipsum.com/api/?type=lucky');
+                const data = await response.json();
+                
+                if (Array.isArray(data) && data.length > 0) {
+                    bannerText.textContent = data[0];
+                }
+            } catch (error) {
+                console.error('Error fetching Bacon Ipsum:', error);
+                bannerText.textContent = 'Failed to load text.';
+            }
+        });
     </script>
 </head>
 <body class="body">
@@ -33,6 +74,30 @@
                 </svg>    
                 <span class="logo__text">Global</span>                            
             </a>
+            <div class="header__dropdown">
+                <input type="checkbox" id='dropdown' class="dropdown__input"></input>
+                <label for="dropdown" class="dropdown__icon">
+                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 3V21M7 21L3 17M7 21L11 17M14 3H21M14 9H19M14 15H17M14 21H15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </label>
+                <div class="dropdown__content">
+                    <ul class="header__nav__list list-reset">
+                        <li class="nav__list__item">
+                            <a href="" class="list__item__link link-reset">Mobile Top Up</a>
+                        </li>
+                        <li class="nav__list__item">
+                            <a href="" class="list__item__link link-reset">About</a>
+                        </li>
+                        <li class="nav__list__item">
+                            <a href="" class="list__item__link link-reset">Rate</a>
+                        </li>
+                        <li class="nav__list__item">
+                            <a href="" class="list__item__link link-reset">Help</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <nav class="header__nav">
                 <ul class="header__nav__list list-reset">
                     <li class="nav__list__item">
@@ -60,14 +125,12 @@
                         <span class="banner__header__text">Now Buy Your PIN or <span class="orange-text">Top Up</span></span>
                         <span class="banner__header__text">With Bank Transfer</span>
                     </h1>
-                    <p class="banner__text">
-                        We Make international calling simple, relible, and cheap basedon your unique calling behavior.
-                    </p>
+                    <p class="banner__text">Loading...</p>
                     <button class="get-started__btn btn-reset">Get Started</button>
                 </div>
                 <div class="search__block">
                     <form class="search__form">
-                        <input placeholder="Where do you want to call?" type="text" class="search__input input-reset">
+                        <input placeholder="Where do you want to call?" minlength="4" maxlength="12" type="text" class="search__input input-reset">
                         <button class="btn-reset search__btn">
                             <svg class="search__btn__svg" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12.4267 20.9866C17.1518 20.9866 20.9822 17.1561 20.9822 12.431C20.9822 7.70594 17.1518 3.87549 12.4267 3.87549C7.70155 3.87549 3.87109 7.70594 3.87109 12.431C3.87109 17.1561 7.70155 20.9866 12.4267 20.9866Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -86,22 +149,20 @@
                     <span class="users__text">45k+ Regular User. <a href="" class="orange-text link-reset">View Price Plan</a></span>
                 </div>
                 <div class="main__background">
-                    <div class="main__background__countries-circle">
-                        <div class="main__background__circles">
-                            <svg class="background__grey-circle" width="450" height="450" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="225" cy="225" r="224" stroke="#E8E8E8" stroke-width="2"/>
-                            </svg>                    
-                            <svg class="background__green-circle" width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="140" cy="140" r="140" fill="#48B774"/>
-                            </svg>
-                        </div>
+                    <div class="main__background__countries-circle">                 
+                        <svg class="background__green-circle" width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="140" cy="140" r="140" fill="#48B774"/>
+                        </svg>
                         <div class="main__background__countries">
                             <img src="public/india.png" alt="" class="country-icon initial">
                             <img src="public/uk.png" alt="" class="country-icon initial">
                             <img src="public/italy.png" alt="" class="country-icon initial">
                             <img src="public/india.png" alt="" class="country-icon initial">
                             <img src="public/india.png" alt="" class="country-icon initial">
-                        </div>                    
+                            <svg class="background__grey-circle" width="450" height="450" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="225" cy="225" r="224" stroke="#E8E8E8" stroke-width="2"/>
+                            </svg>
+                        </div>             
                     </div>
                     <picture class="main__background__picture">
                         <img class="girl__img" src="public/background.png" alt="">
