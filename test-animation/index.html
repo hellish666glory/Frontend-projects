@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.main__background {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 836px;
+    width: 100%;
+}
+
+.main__background__countries-circle {
+    position: absolute;
+    bottom: 151px;
+    left: 190px;
+    z-index: -1;
+    width: 100%;
+}
+
+.background__grey-circle {
+    position: absolute;
+    max-width: 450px;
+    width: 100%;
+    bottom: 0;
+}
+
+.background__green-circle {
+    position: absolute;
+    max-width: 280px;
+    width: 100%;
+    bottom: 53px;
+    left: 90px;
+}
+
+.main__background__picture {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 836px;
+    width: 100%;
+}
+
+.girl__img {
+    width: 100%;
+}
+
+.country-icon {
+    position: absolute;
+    border: solid 10px #FFFFFF;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: transform 1s ease-in-out; /* Add transition for animation */
+    transform-origin: 50% 50%; /* Set origin for rotation */
+}
+
+.country-icon.initial {
+    transform: translate(-50%, -50%) translate(140px, 140px);
+    opacity: 0;
+}
+
+.country-icon.final {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.country-icon:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    bottom: 163px;
+    left: -19px;
+}
+
+.country-icon:nth-child(2) {
+    bottom: 303px;
+    left: 0;
+    height: 80px;
+    width: 80px;
+}
+
+.country-icon:nth-child(3) {
+    left: 210px;
+    bottom: 419px;
+    height: 60px;
+    width: 60px;
+}
+
+.country-icon:nth-child(4) {
+    height: 70px;
+    width: 70px;
+    bottom: 303px;
+    left: 385px;
+}
+
+.country-icon:nth-child(5) {
+    bottom: 163px;
+    left: 422px;
+}
+</style>
+</head>
+<body>
+
+<div class="main__background">
+    <div class="main__background__countries-circle">
+        <div class="main__background__circles">
+            <svg class="background__grey-circle" width="450" height="450" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="225" cy="225" r="224" stroke="#E8E8E8" stroke-width="2"/>
+            </svg>                    
+            <svg class="background__green-circle" width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="140" cy="140" r="140" fill="#48B774"/>
+            </svg>
+        </div>
+        <div class="main__background__countries">
+            <img src="india.png" alt="" class="country-icon initial" data-final-x="225" data-final-y="225">
+            <img src="uk.png" alt="" class="country-icon initial" data-final-x="225" data-final-y="125">
+            <img src="italy.png" alt="" class="country-icon initial" data-final-x="325" data-final-y="225">
+            <img src="india.png" alt="" class="country-icon initial" data-final-x="225" data-final-y="325">
+            <img src="india.png" alt="" class="country-icon initial" data-final-x="125" data-final-y="225">
+        </div>                    
+    </div>
+    <picture class="main__background__picture">
+        <img class="girl__img" src="background.png" alt="">
+    </picture>
+</div>
+
+<script>
+    const countryIcons = document.querySelectorAll('.country-icon');
+    const greyCircleCenterX = 225;
+    const greyCircleCenterY = 225;
+
+    countryIcons.forEach(icon => {
+        const finalX = parseInt(icon.dataset.finalX, 10);
+        const finalY = parseInt(icon.dataset.finalY, 10);
+
+        // Calculate the angle and radius
+        const angle = Math.atan2(finalY - greyCircleCenterY, finalX - greyCircleCenterX);
+        const radius = Math.sqrt(Math.pow(finalX - greyCircleCenterX, 2) + Math.pow(finalY - greyCircleCenterY, 2));
+
+        setTimeout(() => {
+            icon.classList.remove('initial');
+            icon.classList.add('final');
+
+            // Apply the animation with correct translation
+            icon.style.transform = `translate(-50%, -50%) rotate(${angle}rad) translate(${radius}px)`;
+        }, 500);
+    });
+</script>
+
+</body>
+</html>

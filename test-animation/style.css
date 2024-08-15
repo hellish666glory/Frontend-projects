@@ -1,0 +1,59 @@
+.animation-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.girl-image {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: 10;
+}
+
+.circle-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: rotate 10s linear infinite;
+}
+
+.flag-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform-origin: center center;
+}
+
+.flag {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    transform-origin: center center;
+    transition: all 1s ease;
+    z-index: 5;
+}
+
+.flag img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Keyframes for rotating the circle */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.circle-container {
+    animation: rotate 10s linear infinite;
+}
