@@ -444,7 +444,7 @@ button:hover{
 
     .dropdown__content{
         position: absolute;
-        bottom: -159px;
+        bottom: -210px;
         left: -30px;
         width: 184px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
