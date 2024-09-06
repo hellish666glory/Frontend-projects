@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.js"></script>
+    <title>Тут эвакуатор</title>
+</head>
+<body class="body">
+    <header class="header">
+        <div class="header__top">
+            <div class="header__logo">
+                <img src="assets/Logo.png" alt="" class="logo__img">
+            </div>
+            <nav class="nav">
+                <div class="nav__block">
+                    <span class="nav__block__item"><a class="link-reset" href="">о проекте</a></span>
+                    <span class="nav__block__item"><a class="link-reset" href="">контакты</a></span>
+                </div>
+                <button class="btn-reset add__btn">Добавить объявление</button>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__screen">
+            <section class="section">
+                <div class="banner__header">
+                    <div class="bottom__banner">
+                        <h2 class="banner__text">
+                            Телефоны для вызова эвакуатора в <span class="link-like">Москве</span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card__block">
+                        <div class="card">
+                            <h3 class="card__header">Эвакуатор</h3>
+                            <div class="card__content">
+                                <picture class="card__picture">
+                                    <img class="card__img" src="assets/card1.png" alt="">
+                                </picture>
+                                <ul class="price__list list-reset">
+                                    <li class="price__item">
+                                        <span class="price__text">Легковой автомобиль</span>
+                                        <span class="price__text">5 000 руб</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">Мотоцикл (крадроцикл и т.д.)</span>
+                                        <span class="price__text">3 000 руб</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">Внедорожник</span>
+                                        <span class="price__text">нет</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">Микроавтобус</span>
+                                        <span class="price__text">нет</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">Загородный тариф</span>
+                                        <span class="price__text">50 руб/км</span>
+                                    </li>
+                                </ul>
+                                <div class="contact__block">
+                                    <button class="contact__btn btn-reset">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.77204 2.43905L8.84904 2.09505C9.85704 1.77305 10.935 2.29405 11.367 3.31205L12.227 5.34005C12.602 6.22305 12.394 7.26205 11.713 7.90805L9.82004 9.70605C9.93671 10.7821 10.298 11.8411 10.904 12.8831C11.4803 13.8909 12.2525 14.7732 13.175 15.4781L15.451 14.7181C16.313 14.4311 17.252 14.7621 17.781 15.5391L19.013 17.3491C19.629 18.2531 19.518 19.4991 18.755 20.2651L17.937 21.0861C17.123 21.9031 15.961 22.2001 14.885 21.8641C12.3464 21.0721 10.012 18.7211 7.88204 14.8111C5.74937 10.8944 4.99671 7.57172 5.62404 4.84305C5.88804 3.69505 6.70604 2.78005 7.77404 2.43905" fill="white"/>
+                                        </svg>
+                                        +7 999 99 99                                        
+                                    </button>
+                                    <button class="contact__btn btn-reset">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.7072 14.7035C20.592 13.9031 19.974 13.2791 19.1784 13.0931C16.086 12.3683 15.3108 10.5875 15.18 8.6123C14.6316 8.5103 13.656 8.3999 12 8.3999C10.344 8.3999 9.36843 8.5103 8.82003 8.6123C8.68923 10.5875 7.91403 12.3683 4.82163 13.0931C4.02603 13.2803 3.40803 13.9031 3.29283 14.7035L2.69643 18.8339C2.48643 20.2883 3.55443 21.5999 5.04003 21.5999H18.96C20.4444 21.5999 21.5136 20.2883 21.3036 18.8339L20.7072 14.7035ZM12 18.5903C10.326 18.5903 8.96883 17.2463 8.96883 15.5903C8.96883 13.9343 10.326 12.5903 12 12.5903C13.674 12.5903 15.0312 13.9343 15.0312 15.5903C15.0312 17.2463 13.6728 18.5903 12 18.5903ZM23.94 7.1999C23.9112 5.3999 19.3296 2.4011 12 2.3999C4.66923 2.4011 0.0876344 5.3999 0.0600344 7.1999C0.0324344 8.9999 0.0852345 11.3423 3.10203 10.9523C6.63123 10.4951 6.41403 9.2627 6.41403 7.5011C6.41403 6.2723 9.28443 5.9759 12 5.9759C14.7156 5.9759 17.5848 6.2723 17.586 7.5011C17.586 9.2627 17.3688 10.4951 20.898 10.9523C23.9136 11.3423 23.9676 8.9999 23.94 7.1999Z" fill="white"/>
+                                        </svg>
+                                        +7 999 99 99
+                                    </button>
+                                    <div class="contact__parking__block">
+                                        <span class="parking__mark">
+                                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.262 22.634C11.262 22.634 4 16.518 4 10.5C4 8.37827 4.84285 6.34344 6.34315 4.84315C7.84344 3.34285 9.87827 2.5 12 2.5C14.1217 2.5 16.1566 3.34285 17.6569 4.84315C19.1571 6.34344 20 8.37827 20 10.5C20 16.518 12.738 22.634 12.738 22.634C12.334 23.006 11.669 23.002 11.262 22.634ZM12 14C12.4596 14 12.9148 13.9095 13.3394 13.7336C13.764 13.5577 14.1499 13.2999 14.4749 12.9749C14.7999 12.6499 15.0577 12.264 15.2336 11.8394C15.4095 11.4148 15.5 10.9596 15.5 10.5C15.5 10.0404 15.4095 9.58525 15.2336 9.16061C15.0577 8.73597 14.7999 8.35013 14.4749 8.02513C14.1499 7.70012 13.764 7.44231 13.3394 7.26642C12.9148 7.09053 12.4596 7 12 7C11.0717 7 10.1815 7.36875 9.52513 8.02513C8.86875 8.6815 8.5 9.57174 8.5 10.5C8.5 11.4283 8.86875 12.3185 9.52513 12.9749C10.1815 13.6313 11.0717 14 12 14Z" fill="#777777"/>
+                                            </svg>
+                                            Место стоянки
+                                        </span>
+                                        <span class="parking__place">
+                                            Москва, ул Пушкина
+                                        </span>
+                                    </div>
+                                    <button class="btn-reset contact__add__btn">
+                                        <span class="add__id">ID объявления 63</span>
+                                        <span class="add__link link-like">Заказать рекламу</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="card__comment">Эвакуатор авто. Всегда на связи! Быстро и надежно</span>
+                        </div>
+                        <div class="card">
+                            <h3 class="card__header">Эвакуатор</h3>
+                            <div class="card__content">
+                                <picture class="card__picture">
+                                    <img class="card__img" src="assets/card2.png" alt="">
+                                </picture>
+                                <ul class="price__list list-reset">
+                                    <li class="price__item">
+                                        <span class="price__text">Легковой автомобиль</span>
+                                        <span class="price__text">4 000 руб</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">Мотоцикл (крадроцикл и т.д.)</span>
+                                        <span class="price__text">3 000 руб</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">Внедорожник</span>
+                                        <span class="price__text">4 000 руб</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">Микроавтобус</span>
+                                        <span class="price__text">6 000 руб</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">Загородный тариф</span>
+                                        <span class="price__text">50 руб/км</span>
+                                    </li>
+                                </ul>
+                                <div class="contact__block">
+                                    <button class="contact__btn btn-reset">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.77204 2.43905L8.84904 2.09505C9.85704 1.77305 10.935 2.29405 11.367 3.31205L12.227 5.34005C12.602 6.22305 12.394 7.26205 11.713 7.90805L9.82004 9.70605C9.93671 10.7821 10.298 11.8411 10.904 12.8831C11.4803 13.8909 12.2525 14.7732 13.175 15.4781L15.451 14.7181C16.313 14.4311 17.252 14.7621 17.781 15.5391L19.013 17.3491C19.629 18.2531 19.518 19.4991 18.755 20.2651L17.937 21.0861C17.123 21.9031 15.961 22.2001 14.885 21.8641C12.3464 21.0721 10.012 18.7211 7.88204 14.8111C5.74937 10.8944 4.99671 7.57172 5.62404 4.84305C5.88804 3.69505 6.70604 2.78005 7.77404 2.43905" fill="white"/>
+                                        </svg>
+                                        +7 999 99 99                                        
+                                    </button>
+                                    <button class="contact__btn btn-reset">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.7072 14.7035C20.592 13.9031 19.974 13.2791 19.1784 13.0931C16.086 12.3683 15.3108 10.5875 15.18 8.6123C14.6316 8.5103 13.656 8.3999 12 8.3999C10.344 8.3999 9.36843 8.5103 8.82003 8.6123C8.68923 10.5875 7.91403 12.3683 4.82163 13.0931C4.02603 13.2803 3.40803 13.9031 3.29283 14.7035L2.69643 18.8339C2.48643 20.2883 3.55443 21.5999 5.04003 21.5999H18.96C20.4444 21.5999 21.5136 20.2883 21.3036 18.8339L20.7072 14.7035ZM12 18.5903C10.326 18.5903 8.96883 17.2463 8.96883 15.5903C8.96883 13.9343 10.326 12.5903 12 12.5903C13.674 12.5903 15.0312 13.9343 15.0312 15.5903C15.0312 17.2463 13.6728 18.5903 12 18.5903ZM23.94 7.1999C23.9112 5.3999 19.3296 2.4011 12 2.3999C4.66923 2.4011 0.0876344 5.3999 0.0600344 7.1999C0.0324344 8.9999 0.0852345 11.3423 3.10203 10.9523C6.63123 10.4951 6.41403 9.2627 6.41403 7.5011C6.41403 6.2723 9.28443 5.9759 12 5.9759C14.7156 5.9759 17.5848 6.2723 17.586 7.5011C17.586 9.2627 17.3688 10.4951 20.898 10.9523C23.9136 11.3423 23.9676 8.9999 23.94 7.1999Z" fill="white"/>
+                                        </svg>
+                                        +7 999 99 99
+                                    </button>
+                                    <div class="contact__parking__block">
+                                        <span class="parking__mark">
+                                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.262 22.634C11.262 22.634 4 16.518 4 10.5C4 8.37827 4.84285 6.34344 6.34315 4.84315C7.84344 3.34285 9.87827 2.5 12 2.5C14.1217 2.5 16.1566 3.34285 17.6569 4.84315C19.1571 6.34344 20 8.37827 20 10.5C20 16.518 12.738 22.634 12.738 22.634C12.334 23.006 11.669 23.002 11.262 22.634ZM12 14C12.4596 14 12.9148 13.9095 13.3394 13.7336C13.764 13.5577 14.1499 13.2999 14.4749 12.9749C14.7999 12.6499 15.0577 12.264 15.2336 11.8394C15.4095 11.4148 15.5 10.9596 15.5 10.5C15.5 10.0404 15.4095 9.58525 15.2336 9.16061C15.0577 8.73597 14.7999 8.35013 14.4749 8.02513C14.1499 7.70012 13.764 7.44231 13.3394 7.26642C12.9148 7.09053 12.4596 7 12 7C11.0717 7 10.1815 7.36875 9.52513 8.02513C8.86875 8.6815 8.5 9.57174 8.5 10.5C8.5 11.4283 8.86875 12.3185 9.52513 12.9749C10.1815 13.6313 11.0717 14 12 14Z" fill="#777777"/>
+                                            </svg>
+                                            Место стоянки
+                                        </span>
+                                        <span class="parking__place">
+                                            Москва, ул Пушкина
+                                        </span>
+                                    </div>
+                                    <button class="btn-reset contact__add__btn">
+                                        <span class="add__id">ID объявления 63</span>
+                                        <span class="add__link link-like">Заказать рекламу</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="card__comment">Круглосуточно. Стоянка в районе метро Технопарк, быстро доберусь в любую точку города.</span>
+                        </div>
+                        <div class="card">
+                            <h3 class="card__header">Эвакуатор</h3>
+                            <div class="card__content">
+                                <picture class="card__picture">
+                                    <img class="card__img" src="assets/card1.png" alt="">
+                                </picture>
+                                <ul class="price__list list-reset">
+                                    <li class="price__item">
+                                        <span class="price__text">Легковой автомобиль</span>
+                                        <span class="price__text">5 000 руб</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">Мотоцикл (крадроцикл и т.д.)</span>
+                                        <span class="price__text">3 000 руб</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">Внедорожник</span>
+                                        <span class="price__text">нет</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">Микроавтобус</span>
+                                        <span class="price__text">нет</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">Загородный тариф</span>
+                                        <span class="price__text">50 руб/км</span>
+                                    </li>
+                                </ul>
+                                <div class="contact__block">
+                                    <button class="contact__btn btn-reset">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.77204 2.43905L8.84904 2.09505C9.85704 1.77305 10.935 2.29405 11.367 3.31205L12.227 5.34005C12.602 6.22305 12.394 7.26205 11.713 7.90805L9.82004 9.70605C9.93671 10.7821 10.298 11.8411 10.904 12.8831C11.4803 13.8909 12.2525 14.7732 13.175 15.4781L15.451 14.7181C16.313 14.4311 17.252 14.7621 17.781 15.5391L19.013 17.3491C19.629 18.2531 19.518 19.4991 18.755 20.2651L17.937 21.0861C17.123 21.9031 15.961 22.2001 14.885 21.8641C12.3464 21.0721 10.012 18.7211 7.88204 14.8111C5.74937 10.8944 4.99671 7.57172 5.62404 4.84305C5.88804 3.69505 6.70604 2.78005 7.77404 2.43905" fill="white"/>
+                                        </svg>
+                                        +7 999 99 99                                        
+                                    </button>
+                                    <button class="contact__btn btn-reset">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.7072 14.7035C20.592 13.9031 19.974 13.2791 19.1784 13.0931C16.086 12.3683 15.3108 10.5875 15.18 8.6123C14.6316 8.5103 13.656 8.3999 12 8.3999C10.344 8.3999 9.36843 8.5103 8.82003 8.6123C8.68923 10.5875 7.91403 12.3683 4.82163 13.0931C4.02603 13.2803 3.40803 13.9031 3.29283 14.7035L2.69643 18.8339C2.48643 20.2883 3.55443 21.5999 5.04003 21.5999H18.96C20.4444 21.5999 21.5136 20.2883 21.3036 18.8339L20.7072 14.7035ZM12 18.5903C10.326 18.5903 8.96883 17.2463 8.96883 15.5903C8.96883 13.9343 10.326 12.5903 12 12.5903C13.674 12.5903 15.0312 13.9343 15.0312 15.5903C15.0312 17.2463 13.6728 18.5903 12 18.5903ZM23.94 7.1999C23.9112 5.3999 19.3296 2.4011 12 2.3999C4.66923 2.4011 0.0876344 5.3999 0.0600344 7.1999C0.0324344 8.9999 0.0852345 11.3423 3.10203 10.9523C6.63123 10.4951 6.41403 9.2627 6.41403 7.5011C6.41403 6.2723 9.28443 5.9759 12 5.9759C14.7156 5.9759 17.5848 6.2723 17.586 7.5011C17.586 9.2627 17.3688 10.4951 20.898 10.9523C23.9136 11.3423 23.9676 8.9999 23.94 7.1999Z" fill="white"/>
+                                        </svg>
+                                        +7 999 99 99
+                                    </button>
+                                    <div class="contact__parking__block">
+                                        <span class="parking__mark">
+                                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.262 22.634C11.262 22.634 4 16.518 4 10.5C4 8.37827 4.84285 6.34344 6.34315 4.84315C7.84344 3.34285 9.87827 2.5 12 2.5C14.1217 2.5 16.1566 3.34285 17.6569 4.84315C19.1571 6.34344 20 8.37827 20 10.5C20 16.518 12.738 22.634 12.738 22.634C12.334 23.006 11.669 23.002 11.262 22.634ZM12 14C12.4596 14 12.9148 13.9095 13.3394 13.7336C13.764 13.5577 14.1499 13.2999 14.4749 12.9749C14.7999 12.6499 15.0577 12.264 15.2336 11.8394C15.4095 11.4148 15.5 10.9596 15.5 10.5C15.5 10.0404 15.4095 9.58525 15.2336 9.16061C15.0577 8.73597 14.7999 8.35013 14.4749 8.02513C14.1499 7.70012 13.764 7.44231 13.3394 7.26642C12.9148 7.09053 12.4596 7 12 7C11.0717 7 10.1815 7.36875 9.52513 8.02513C8.86875 8.6815 8.5 9.57174 8.5 10.5C8.5 11.4283 8.86875 12.3185 9.52513 12.9749C10.1815 13.6313 11.0717 14 12 14Z" fill="#777777"/>
+                                            </svg>
+                                            Место стоянки
+                                        </span>
+                                        <span class="parking__place">
+                                            Москва, ул Пушкина
+                                        </span>
+                                    </div>
+                                    <button class="btn-reset contact__add__btn">
+                                        <span class="add__id">ID объявления 63</span>
+                                        <span class="add__link link-like">Заказать рекламу</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="card__comment">Эвакуатор авто. Всегда на связи! Быстро и надежно</span>
+                        </div>
+                        <div class="card">
+                            <h3 class="card__header">Эвакуатор</h3>
+                            <div class="card__content">
+                                <picture class="card__picture">
+                                    <img class="card__img" src="assets/card2.png" alt="">
+                                </picture>
+                                <ul class="price__list list-reset">
+                                    <li class="price__item">
+                                        <span class="price__text">Легковой автомобиль</span>
+                                        <span class="price__text">4 000 руб</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">Мотоцикл (крадроцикл и т.д.)</span>
+                                        <span class="price__text">3 000 руб</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">Внедорожник</span>
+                                        <span class="price__text">4 000 руб</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">Микроавтобус</span>
+                                        <span class="price__text">6 000 руб</span>
+                                    </li>
+                                    <li class="price__item">
+                                        <span class="price__text">Загородный тариф</span>
+                                        <span class="price__text">50 руб/км</span>
+                                    </li>
+                                </ul>
+                                <div class="contact__block">
+                                    <button class="contact__btn btn-reset">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.77204 2.43905L8.84904 2.09505C9.85704 1.77305 10.935 2.29405 11.367 3.31205L12.227 5.34005C12.602 6.22305 12.394 7.26205 11.713 7.90805L9.82004 9.70605C9.93671 10.7821 10.298 11.8411 10.904 12.8831C11.4803 13.8909 12.2525 14.7732 13.175 15.4781L15.451 14.7181C16.313 14.4311 17.252 14.7621 17.781 15.5391L19.013 17.3491C19.629 18.2531 19.518 19.4991 18.755 20.2651L17.937 21.0861C17.123 21.9031 15.961 22.2001 14.885 21.8641C12.3464 21.0721 10.012 18.7211 7.88204 14.8111C5.74937 10.8944 4.99671 7.57172 5.62404 4.84305C5.88804 3.69505 6.70604 2.78005 7.77404 2.43905" fill="white"/>
+                                        </svg>
+                                        +7 999 99 99                                        
+                                    </button>
+                                    <button class="contact__btn btn-reset">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.7072 14.7035C20.592 13.9031 19.974 13.2791 19.1784 13.0931C16.086 12.3683 15.3108 10.5875 15.18 8.6123C14.6316 8.5103 13.656 8.3999 12 8.3999C10.344 8.3999 9.36843 8.5103 8.82003 8.6123C8.68923 10.5875 7.91403 12.3683 4.82163 13.0931C4.02603 13.2803 3.40803 13.9031 3.29283 14.7035L2.69643 18.8339C2.48643 20.2883 3.55443 21.5999 5.04003 21.5999H18.96C20.4444 21.5999 21.5136 20.2883 21.3036 18.8339L20.7072 14.7035ZM12 18.5903C10.326 18.5903 8.96883 17.2463 8.96883 15.5903C8.96883 13.9343 10.326 12.5903 12 12.5903C13.674 12.5903 15.0312 13.9343 15.0312 15.5903C15.0312 17.2463 13.6728 18.5903 12 18.5903ZM23.94 7.1999C23.9112 5.3999 19.3296 2.4011 12 2.3999C4.66923 2.4011 0.0876344 5.3999 0.0600344 7.1999C0.0324344 8.9999 0.0852345 11.3423 3.10203 10.9523C6.63123 10.4951 6.41403 9.2627 6.41403 7.5011C6.41403 6.2723 9.28443 5.9759 12 5.9759C14.7156 5.9759 17.5848 6.2723 17.586 7.5011C17.586 9.2627 17.3688 10.4951 20.898 10.9523C23.9136 11.3423 23.9676 8.9999 23.94 7.1999Z" fill="white"/>
+                                        </svg>
+                                        +7 999 99 99
+                                    </button>
+                                    <div class="contact__parking__block">
+                                        <span class="parking__mark">
+                                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.262 22.634C11.262 22.634 4 16.518 4 10.5C4 8.37827 4.84285 6.34344 6.34315 4.84315C7.84344 3.34285 9.87827 2.5 12 2.5C14.1217 2.5 16.1566 3.34285 17.6569 4.84315C19.1571 6.34344 20 8.37827 20 10.5C20 16.518 12.738 22.634 12.738 22.634C12.334 23.006 11.669 23.002 11.262 22.634ZM12 14C12.4596 14 12.9148 13.9095 13.3394 13.7336C13.764 13.5577 14.1499 13.2999 14.4749 12.9749C14.7999 12.6499 15.0577 12.264 15.2336 11.8394C15.4095 11.4148 15.5 10.9596 15.5 10.5C15.5 10.0404 15.4095 9.58525 15.2336 9.16061C15.0577 8.73597 14.7999 8.35013 14.4749 8.02513C14.1499 7.70012 13.764 7.44231 13.3394 7.26642C12.9148 7.09053 12.4596 7 12 7C11.0717 7 10.1815 7.36875 9.52513 8.02513C8.86875 8.6815 8.5 9.57174 8.5 10.5C8.5 11.4283 8.86875 12.3185 9.52513 12.9749C10.1815 13.6313 11.0717 14 12 14Z" fill="#777777"/>
+                                            </svg>
+                                            Место стоянки
+                                        </span>
+                                        <span class="parking__place">
+                                            Москва, ул Пушкина
+                                        </span>
+                                    </div>
+                                    <button class="btn-reset contact__add__btn">
+                                        <span class="add__id">ID объявления 63</span>
+                                        <span class="add__link link-like">Заказать рекламу</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="card__comment">Круглосуточно. Стоянка в районе метро Технопарк, быстро доберусь в любую точку города.</span>
+                        </div>
+                    </div>
+                    <div class="markup__block">
+                        <a href="" class="number__link link-reset active">1</a>
+                        <a href="" class="number__link link-reset">2</a>
+                        <a href="" class="number__link link-reset">3</a>
+                        <a href="" class="number__link link-reset">4</a>
+                        <a href="" class="number__link link--next link-reset"><svg width="15" height="26" viewBox="0 0 15 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L13 13L1 25" stroke="#0297D4" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            </a>
+                    </div>
+                </div>
+                <div class="banner">
+                    <div class="banner__main container">
+                        <img src="assets/Illustration.png" alt="" class="banner__img">
+                        <h2 class="banner__text">Здесь может быть ваш эвакуатор</h2>
+                        <button class="btn-reset add__btn">Добавить объявление</button>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="how-to__block">
+                        <div class="how-to__text-block">
+                            <h4 class="how-to__header section__header">Как вызвать эвакуатор в Москве 
+                                дешево?</h4>
+                                <p class="how-to__parag">Поломка авто или ДТП – случайностей на дороге много. Решение одно – вызвать эвакуатор и доставить неисправный автомобильна СТО/парковку или в гараж в Москве. С помощью онлайн-сервиса Эварус вы сможете заказать услугу эвакуатора в Москве (Московской области) максимально быстро и при этом сэкономить.</p>
+                                <p class="how-to__parag">Мы предоставляем доступ к базе коммерческих и частных эвакуаторов Москвы. Это надежные компании, которые оперативно пришлют спецтехнику вам на помощь и обеспечат безопасную транспортировку авто.</p>
+                        </div>
+                        <picture class="how-to__picture">
+                            <img src="assets/how-to.png" alt="" class="how-to__img">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <section class="section yellow-section">
+                <div class="container">
+                    <h4 class="what-to-know__header section__header">Что нужно знать, чтобы заказать эвакуатор в Москве</h4>
+                    <div class="what-to-know">
+                        <div class="what-to-know__block">
+                            <picture class="what-to-know__picture">
+                                <img src="assets/what-to1.png" alt="" class="what-to-know__img">
+                            </picture>
+                            <p class="what-to-know__text">Заказы на вызов эвакуатора в Москве перевозчики-партнеры “Тут Эвакуатор” принимают круглосуточно. Когда бы вы не позвонили, эвакуатор найдется всегда. Размещая заказ 
+                                на эвакуатор, ознакомьтесь с информацией 
+                                о транспортной компании, проконсультируйтесь 
+                                с ее специалистами и выберите оптимальный вариант перевозки своего ТС.</p>
+                        </div>
+                        <div class="what-to-know__block">
+                            <picture class="what-to-know__picture">
+                                <img src="assets/what-to2.png" alt="" class="what-to-know__img">
+                            </picture>
+                            <p class="what-to-know__text">Примите во внимание, что одни и те же виды эвакуаторов рассчитаны на транспортировку авто разных классов. Вопрос заключается лишь в том, какой тип эвакуатор будет выгоднее задействовать в вашем случае. Следуя рекомендациям перевозчика, вы сможете недорого эвакуировать авто как в Москве, так и в области.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <h4 class="includes__header section__header">Что входит в стоимость перевозки эвакуатором</h4>
+                    <div class="includes__text__block">
+                        <p class="includes__text">Стоимость эвакуации включает в себя оплату услуг по погрузке, перевозке и выгрузке авто, 
+                            а также по подаче эвакуатора в пункт дислокации ТС в Москве.</p>
+                        <p class="includes__text">При формировании цены перевозчики берут в расчет четыре аспекта:</p>
+                    </div>
+                    <ul class="includes__list list-reset">
+                        <li class="includes__items">
+                            <div class="elipse__svg">
+                                <svg class="includes__svg" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect width="80" height="80" fill="url(#pattern0_16_153)"/>
+                                    <defs>
+                                    <pattern id="pattern0_16_153" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_16_153" transform="scale(0.00232019)"/>
+                                    </pattern>
+                                    <image id="image0_16_153" width="431" height="431" xlink:href="data:image/png;base64,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"/>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <h5 class="includes__item__header">Грузоподъемность
+                                эвакуатора</h5>
+                            <p class="includes__item__text">Чем мощнее эвакуатор,
+                                тем дороже обходится 
+                                ее эксплуатация, 
+                                ем внушительнее будет 
+                                сумма к оплате эвакуации</p>
+                        </li>
+                        <li class="includes__items">
+                            <div class="elipse__svg">
+                                <svg class="includes__svg" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M69.9002 68.0493C71.7351 69.2796 74.2396 68.7975 75.2806 66.849C78.0323 61.6984 79.6308 55.9924 79.9433 50.1289C80.327 42.9299 78.758 35.761 75.4022 29.3805C72.0464 23 67.0286 17.645 60.8795 13.8819C54.7304 10.1188 47.6786 8.08744 40.4699 8.00276C33.2612 7.91808 26.1636 9.78317 19.9278 13.4008C13.692 17.0184 8.54974 22.2541 5.04499 28.554C1.54024 34.8539 -0.196763 41.984 0.0177041 49.19C0.192387 55.0592 1.65639 60.8012 4.28638 66.015C5.28133 67.9874 7.77379 68.5283 9.63701 67.3414L12.5138 65.5088C14.377 64.322 14.8965 61.8575 13.981 59.847C12.4116 56.4 11.537 52.6628 11.4236 48.8505C11.2703 43.7002 12.5118 38.6041 15.0167 34.1014C17.5216 29.5987 21.1969 25.8566 25.6538 23.271C30.1107 20.6854 35.1836 19.3523 40.3358 19.4129C45.4881 19.4734 50.5282 20.9252 54.9231 23.6148C59.3181 26.3044 62.9044 30.1318 65.3029 34.6921C67.7014 39.2525 68.8228 44.3763 68.5486 49.5216C68.3456 53.3302 67.3835 57.0458 65.7335 60.4549C64.7711 62.4434 65.2325 64.9194 67.0673 66.1497L69.9002 68.0493Z" fill="white"/>
+                                    <path d="M45.2811 61.6374C44.3982 64.9326 41.0111 66.8882 37.7159 66.0052C34.4207 65.1223 32.4652 61.7352 33.3481 58.44C34.2311 55.1448 47.194 30.6324 47.194 30.6324C47.194 30.6324 46.1641 58.3422 45.2811 61.6374Z" fill="white"/>
+                                </svg>
+                            </div>                            
+                            <h5 class="includes__item__header">Предполагаемый пробег</h5>
+                            <p class="includes__item__text">Учитывается удаленность стоянки эвакуатора 
+                                от местоположения ТС, расстояние между пунктами погрузки в Москве
+                                и выгрузки авто</p>
+                        </li>
+                        <li class="includes__items">
+                            <div class="elipse__svg">
+                                <svg class="includes__svg" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect x="11" y="11" width="59" height="59" fill="url(#pattern0_17_37)"/>
+                                    <defs>
+                                    <pattern id="pattern0_17_37" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_17_37" transform="scale(0.00232019)"/>
+                                    </pattern>
+                                    <image id="image0_17_37" width="431" height="431" xlink:href="data:image/png;base64,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"/>
+                                    </defs>
+                                </svg>      
+                            </div>                      
+                            <h5 class="includes__item__header">Дополнительное 
+                                оборудование</h5>
+                            <p class="includes__item__text">При эвакуации машин 
+                                с серьезными поломками перевозчики оснащают эвакуатор вспомогательными приспособлениями, 
+                                что закономерно отражается 
+                                на стоимости транспортировки.</p>
+                        </li>
+                        <li class="includes__items">
+                            <div class="elipse__svg">
+                                <svg class="includes__svg" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect x="6" y="6" width="68" height="68" fill="url(#pattern0_17_50)"/>
+                                    <defs>
+                                    <pattern id="pattern0_17_50" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_17_50" transform="translate(-0.0952381 -0.0952381) scale(0.00276213)"/>
+                                    </pattern>
+                                    <image id="image0_17_50" width="431" height="431" xlink:href="data:image/png;base64,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"/>
+                                    </defs>
+                                </svg>
+                            </div>                            
+                            <h5 class="includes__item__header">Уровень сложности</h5>
+                            <p class="includes__item__text">При значительном повреждении автомобиля погрузочно-разгрузочные работы усложняются. Они требуют подключения водителя-оператора высокой квалификации</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <h4 class="pros__header section__header">Преимущества онлайн-сервиса ТутЭвакуатор.Ру</h4>
+                    <div class="pros__content">
+                        <div class="pros__text__content">
+                            <p class="pros__text">ТутЭвакуатор.Ру – это удобный сервис для тех, кому нужно недорого и быстро перевезти авто с техническими неисправностями или же с повреждениями, полученными при ДТП в Москве.</p>
+                            <h5 class="pros__list__header">Воспользовавшись ​ТутЭвакуатор.Ру, вы сможете:</h5>
+                            <ul class="pros__list list-reset">
+                                <li class="pros__item">получить постоянный доступ к базе надежных перевозчиков Москвы — сервис работает всегда, 
+                                    вне зависимости от воскресных/праздничных дней</li>
+                                <li class="pros__item">заказать эвакуатор круглосуточно — 24/7</li>
+                                <li class="pros__item">выбрать самое экономически выгодное предложение — цены на эвакуационные услуги рыночные, разница может быть ощутимой</li>
+                                <li class="pros__item">договориться с транспортной компанией напрямую — без посредников и комиссионных</li>
+                                <li class="pros__item">осуществить эвакуацию авто недорого — без скрытых платежей, неучтенных расходов</li>
+                                <li class="pros__item">вызвать эвакуатор в срочном порядке — охвачена Московская область, стоянки спецтехники базируются во многих районах Москвы, подача выполняется оперативно</li>
+                            </ul>
+                        </div>
+                        <picture class="pros__picture">
+                            <img src="assets/Man.png" alt="" class="pros__img">
+                        </picture>
+                    </div>
+                    <div class="pros__cards__block">
+                        <div class="pros__card">
+                            <h5 class="pros__card__header">Как оплатить заказ на эвакуатор</h5>
+                            <p class="pros__card__text">Услуги по эвакуации вы оплачиваете непосредственно исполнителю – транспортной компании, взявшейся за перевозку вашего ТС. Оплата производится по завершении эвакуации, после выгрузки авто в конечной точке в Москве.</p>
+                            <p class="pros__card__text">Формы оплаты стандартные для Москвы: наличный/безналичный расчет или банковский перевод. Эварус не взимает комиссионные с клиентов за пользование сервисом.</p>
+                        </div>
+                        <div class="pros__card">
+                            <h5 class="pros__card__header">Как скоро прибудет эвакуатор</h5>
+                            <p class="pros__card__text">При оформлении заказа перевозчик сообщит вам расчетное время прибытия эвакуатора в точку погрузки авто. Как правило, в Москве это происходит в течение 10-15 мин., но зависит от загруженности дорог Москвы и погодных условий. Перевозчик, принявший заказ, будет информировать вас о наличии дорожных пробок и возможной задержке подачи эвакуатора. Автопарки наших партнеров находятся во многих районах Москвы, поэтому мы рекомендуем вам выбрать ближайший эвакуатор, чтобы ускорить процесс транспортировки авто.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <h4 class="options__header section__header">Какой вес может взять на борт эвакуатор</h4>
+                    <p class="options__text">Эвакуатор используют для перевозки всех видов автотранспорта: от небольших квадроциклов до габаритных коммерческих авто. Эвакуатор способен транспортировать автомобили до 8 т.</p>
+                    <div class="swiper-container">
+                        <div class="swiper options__slider">
+                            <h5 class="options__slider__header">Виды эвакуаторов, доступные для заказа на ТутЭвакуатор.Ру:</h5>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide options__slider__item">
+                                    <h6 class="options__slide__header">Эвакуатор с краном-манипулятором и прямой платформой</h6>
+                                    <picture class="options__slide__picture">
+                                        <img src="assets/option1.png" alt="" class="options__slide__img">
+                                    </picture>
+                                    <p class="options__slide__text">Компактный и маневренный эвакуатор для транспортировки авто массой до 3,5 т. За счет вылета стрелы манипулятор осуществляет погрузку/разгрузку ТС с расстояния до 5 м. Он удобен для эвакуации автомобилей с узких улиц/дворов, небольших стоянок/парковок Москвы.</p>
+                                </div>
+                                <div class="swiper-slide options__slider__item">
+                                    <h6 class="options__slide__header">Эвакуатор с манипулятором и ломаной / сдвижной платформой</h6>
+                                    <picture class="options__slide__picture">
+                                        <img src="assets/option2.png" alt="" class="options__slide__img">
+                                    </picture>
+                                    <p class="options__slide__text">Универсальный и надежный эвакуатор для эвакуации любых видов транспортных средств, включая крупную сельскохозяйственную/строительную/коммунальную технику, а также авто с низким клиренсом. Этот тип эвакуатора может быть задействован при перевозке как сильно пострадавших в аварии автомобилей, так и ТС, которые в состоянии самостоятельно заехать на платформу эвакуатора.</p>
+                                </div>
+                                <div class="swiper-slide options__slider__item">
+                                    <h6 class="options__slide__header">Эвакуатор с лебедкой и платформой с аппарелями</h6>
+                                    <picture class="options__slide__picture">
+                                        <img src="assets/option3.png" alt="" class="options__slide__img">
+                                    </picture>
+                                    <p class="options__slide__text">Используется для перевозки ТС массой до 7 т. Автомобиль затаскивают на платформу эвакуатора по направляющим при помощи электрической/гидравлической/ручной лебедки. Эвакуатор данной модификации не применяется для транспортировки авто с АКПП или заблокированными колесами.</p>
+                                </div>
+                                <div class="swiper-slide options__slider__item">
+                                    <h6 class="options__slide__header">Эвакуатор с лебедкой и укороченной базой для частичной погрузки авто</h6>
+                                    <picture class="options__slide__picture">
+                                        <img src="assets/option4.png" alt="" class="options__slide__img">
+                                    </picture>
+                                    <p class="options__slide__text">Основное назначение – транспортировка крупнотоннажной спецтехники, грузовых авто, автобусов.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper__button swiper-button-next">
+                            <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 1L5 13L17 25" stroke="#0297D4" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="swiper__button swiper-button-prev">
+                            <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 1L5 13L17 25" stroke="#0297D4" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <script defer>
+                    const swiper = new Swiper('.options__slider', {
+                        slidesPerView: 'auto',
+                        spaceBetween: 32,
+                        slidesPerGroup: 2,
+                        pagination: {                      
+                            el: '.swiper-pagination',
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev'
+                        },
+                    });
+                </script>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="order__row--top">
+                        <div class="order__block--left">
+                            <h4 class="order__block__header section__header">Что необходимо сообщить при заказе эвакуатора</h4>
+                            <p class="order__block__text">Чтобы выбрать эвакуатор с необходимыми техническими параметрами и минимизировать расходы, при вызове эвакуатора следует указать:</p>
+                            <ul class="order__block__list list-reset">
+                                <li class="order__block__item">
+                                    <span class="order__item__text">
+                                        марку, модель, год выпуска и полную массу авто
+                                    </span>
+                                </li>
+                                <li class="order__block__item">
+                                    <span class="order__item__text">
+                                        характер неисправности ТС
+                                    </span>
+                                </li>
+                                <li class="order__block__item">
+                                    <span class="order__item__text">
+                                        состояние ходовой части, трансмиссии, рулевого управления
+                                    </span>
+                                </li>
+                                <li class="order__block__item">
+                                    <span class="order__item__text">
+                                        адрес подачи эвакуатора и пункт конечного назначения в Москве
+                                    </span>
+                                </li>
+                                <li class="order__block__item">
+                                    <span class="order__item__text">
+                                        наличие ключей от авто и документов, подтверждающих право на управление ТС (водительские права, техпаспорт и доверенность, если вы не собственник авто)
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="order__img__block">
+                            <img src="assets/woman.png" alt="" class="order__img">
+                        </div>
+                    </div>
+                    <div class="order__row--bottom">
+                        <div class="order__img__block">
+                            <img src="assets/key.png" alt="" class="order__img">
+                        </div>
+                        <div class="order__block--right">
+                            <h4 class="order__block__header section__header">Как эвакуировать авто с заблокированными колесами</h4>
+                            <p class="order__block__text">При помощи сервиса ТутЭвакуатор.Ру вы сможете вызвать эвакуатор в экстренных ситуациях, например, когда колеса авто заблокированы или ходовая ТС критически пострадала в результате аварии.</p>
+                            <p class="order__block__text">Перевозка автомобиля с заблокированными колесами возможна несколькими типами эвакуаторов:</p>
+                            <ul class="order__block__list list-reset">
+                                <li class="order__block__item">
+                                    <span class="order__item__text">
+                                        Эвакуатор с манипулятором. На ТС устанавливают четыре колесных захвата, закрепленных на широких текстильных стропах. С помощью специальных петель оператор манипулятора регулирует длину строп, чтобы при перемещении на эвакуатор авто не кренилось. Стропы присоединяют к линейной или H-образной траверсе. Кран-манипулятор подхватывает траверсу за проушину, поднимает автомобиль и загружает на платформу эвакуатора.
+                                    </span>
+                                </li>
+                                <li class="order__block__item">
+                                    <span class="order__item__text">
+                                        Эвакуатор с гидроплатформой (без аппарелей) и лебедкой. Авто приподнимают домкратом, под заблокированные колеса устанавливают подкатные тележки. При помощи лебедки авто затягивают на наклонную платформу эвакуатора. После этого платформу эвакуатора приводят в горизонтальное положение.
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="tab__link__block">
+                        <button data-target-id="1" class="tab__link btn-reset tab--active">Стоимость</button>
+                        <button data-target-id="2" class="tab__link btn-reset">Как заказать</button>
+                    </div>
+                    <div class="tab__container">
+                        <div class="tab tab--show" data-id="1">
+                            <h4 class="tab__header section__header">Стоимость вызова эвакуатора для перевозки авто</h4>
+                            <p class="tab__text">
+                                На сайте Эварус представлены цены, выставленные перевозчиками за стандартную услугу эвакуации авто по Москве и области. Начальная стоимость транспортировки зависит от габаритов и веса ТС: перевозка мотоцикла/малолитражки будет стоить дешевле, чем внедорожника/минивена. Дороже всего обойдется эвакуация неисправной спецтехники и грузового транспорта.
+                            </p>
+                            <h5 class="tab__list__header">На стоимость услуги эвакуатора в Москве влияет ряд факторов:</h5>
+                            <ul class="tab__list list-reset">
+                                <li class="tab__list__item">
+                                    <span class="tab__item__text">класс, масса, степень повреждения транспортируемого авто</span>
+                                </li>
+                                <li class="tab__list__item">
+                                    <span class="tab__item__text">первоначальное месторасположение ТС в Москве и дальность следования</span>
+                                </li>
+                                <li class="tab__list__item">
+                                    <span class="tab__item__text">сложность погрузочно-разгрузочных операций</span>
+                                </li>
+                                <li class="tab__list__item">
+                                    <span class="tab__item__text">дорожные и погодные условия Москвы</span>
+                                </li>
+                            </ul>
+                            <p class="tab__text">
+                                Окончательная цена зависит от того, куда подавать эвакуатор и где впоследствии выгружать автомобиль: Москва это будет или Московская область. Транспортировка по МО оплачивается согласно прайсу, плюс тариф за каждый км пробега от МКАД. Суммарная оплата увеличится, если машина находится в кювете/яме/гараже/водоеме и подъезд к ней усложнен. Стоимость возрастет и при наличии заблокированных колес/рулевого управления или серьезного повреждения ТС. <br>Все нюансы эвакуации авто вы сможете обсудить с перевозчиком. Ознакомившись с конкретной ситуацией, он озвучит цену и сроки подачи эвакуатора.
+                            </p>
+                            <h5 class="tab__list__header">В каких случаях возможно изменение стоимости услуги после прибытия эвакуатора к месту погрузки авто:</h5>
+                            <ul class="tab__list list-reset">
+                                <li class="tab__list__item">
+                                    <span class="tab__item__text">простой эвакуатора по вине клиента</span>
+                                </li>
+                                <li class="tab__list__item">
+                                    <span class="tab__item__text">смена маршрута после размещения заказа</span>
+                                </li>
+                                <li class="tab__list__item">
+                                    <span class="tab__item__text">непредвиденное усложнение эвакуации из-за неправильных/неполных данных о ТС</span>
+                                </li>
+                            </ul>
+                            <p class="tab__text">
+                                Во избежание незапланированных трат, сообщите диспетчерской службе подробные сведения о своем автомобиле и обстоятельствах его поломки.
+                            </p>
+                        </div>
+                        <div class="tab" data-id="2">
+                            <h4 class="tab__header section__header">Стоимость вызова эвакуатора для перевозки авто</h4>
+                            <div class="tab__text">
+                                Воспользовавшись онлайн-ресурсом Эварус, вы сократите время на поиск эвакуатора в Москве, МО и закажете услугу по оптимальной цене. Вам не придется обзванивать знакомых или долго искать телефон эвакуатора в интернете. Проанализируйте предложения на нашем сайте, выберите лучшие условия и стоимость перевозки. 
+                            </div>
+                            <h5 class="tab__list__header">Как вызвать эвакуатор с помощью онлайн-сервиса ТутЭвакуатор.Ру:</h5>
+                            <ol class="tab__list">
+                                <li class="tab__list__item">
+                                    <span class="tab__item__text">Ознакомьтесь с картой Москвы и Московской области, на которой желтыми маркерами обозначены стоянки эвакуаторов.</span>
+                                </li>
+                                <li class="tab__list__item">
+                                    <span class="tab__item__text">Увеличьте масштаб и определите, какой из адресов находится рядом с местом вашей дислокации</span>
+                                </li>
+                                <li class="tab__list__item">
+                                    <span class="tab__item__text">Выберите ближайший эвакуатор и нажмите на соответствующий маркер</span>
+                                </li>
+                                <li class="tab__list__item">
+                                    <span class="tab__item__text">Просмотрите детальную информацию о перевозчике: возможные способы погрузки ТС, комплектацию автопарка, типы транспортируемых авто прайс с ценами</span>
+                                </li>
+                                <li class="tab__list__item">
+                                    <span class="tab__item__text">Кликните по голубому полю внизу карточки перевозчика и возьмите телефонный номер компании</span>
+                                </li>
+                                <li class="tab__list__item">
+                                    <span class="tab__item__text">Созвонитесь с диспетчером фирмы, обсудите детали эвакуации в Москве/МО и стоимость заказа</span>
+                                </li>
+                                <li class="tab__list__item">
+                                    <span class="tab__item__text">Сравните цены и условия перевозки у нескольких компаний, выберите наиболее подходящий для себя вариант</span>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="publish__screen">
+            <div class="banner">
+                <h2 class="ban__header">Создать объявление</h2>
+            </div>
+            <div class="container">
+                <div class="form__text__block">
+                    <svg class="form__text__svg" width="104" height="93" viewBox="0 0 104 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M60.6674 27.1244H49.8326C48.1087 27.1244 46.4554 27.7368 45.2364 28.8268C44.0175 29.9169 43.3326 31.3953 43.3326 32.9369C43.3326 34.4785 44.0175 35.9569 45.2364 37.0469C46.4554 38.137 48.1087 38.7494 49.8326 38.7494H54.1674C55.8913 38.7494 57.5446 39.3618 58.7636 40.4518C59.9825 41.5419 60.6674 43.0203 60.6674 44.5619C60.6674 45.3252 60.4992 46.081 60.1726 46.7862C59.8459 47.4914 59.3671 48.1322 58.7636 48.6719C58.16 49.2117 57.4434 49.6398 56.6548 49.9319C55.8662 50.224 55.021 50.3744 54.1674 50.3744H43.3326M52 50.3744V54.2506M52 23.25V27.1244" stroke="#344054" stroke-width="2.08" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M26 81.375H78M86.6674 11.625H17.3326C14.9406 11.625 13 13.3604 13 15.4994V61.9994C13 64.1384 14.9406 65.8756 17.3326 65.8756H86.6674C89.0594 65.8756 91 64.1402 91 61.9994V15.4994C91 13.3604 89.0594 11.625 86.6674 11.625Z" stroke="#0297D4" stroke-width="2.08" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p class="from__text">Заполните все поля формы на размещение своего объявления на сайте. Размещение объявления платное. Стоимость за одно объявление составляет <span class="publish__price">990 руб</span>. Объявление будет опубликовано на сайте после оплаты и проверки модератором.</p> 
+                </div>
+                <form action="" class="publish__form">
+                    <div class="input__wrapper">
+                        <label for="city" class="publish__form__label">Выберите город</label>
+                        <select id="city" class="publish__form__select">
+                            <option value="">Выберите город</option>
+                            <option value="Москва">Москва</option>
+                        </select>
+                    </div>
+                    <div class="input__wrapper">
+                        <label for="name" class="publish__form__label">Ваше имя</label>
+                        <input id="name" class="input-reset publish__form__input">
+                    </div>
+                    <div class="input__wrapper">
+                        <label for="phone-number" class="publish__form__label">Номер мобильного телефона</label>
+                        <input id="phone-number" placeholder="+7 (999) 999 99 99" class="input-reset publish__form__input">
+                    </div>
+                    <div class="input__wrapper">
+                        <label for="city-number" class="publish__form__label">Номер городского телефона</label>
+                        <input id="city-number" placeholder="+7 (999) 999 99 99" class="input-reset publish__form__input">
+                    </div>
+                    <div class="input__wrapper">
+                            <label for="email" class="publish__form__label">Ваш email</label>
+                            <input id="email" placeholder="example@gmail.com" class="input-reset publish__form__input">
+                    </div>
+                    <div class="input__wrapper">
+                        <label for="parking-address" class="publish__form__label">Адрес стоянки эвакуатора</label>
+                        <input id="parking-address" class="input-reset publish__form__input">
+                    </div class="input__wrapper">
+                    <h6 class="form__separator"><span>Информация</span></h6>
+                    <div class="input__wrapper">
+                        <label for="header" class="publish__form__label">Заголовок объявления</label>
+                        <input type="text" id="header" placeholder="Не более 50 символов" class="input-reset publish__form__input">
+                    </div>
+                    <div class="input__wrapper">
+                        <label for="desc" class="publish__form__label">Описание объявления</label>
+                        <input type="text" id="desc" placeholder="Не более 50 символов" class="input-reset publish__form__input">
+                    </div>
+                    <h6 class="form__separator"><span>Цены</span></h6>
+                    <div class="price__option__block">
+                        <div class="input__wrapper">
+                            <label for="passenger" class="publish__form__label">Легковой автомобиль</label>
+                            <input type="text" class="input-reset publish__form__input" id="passenger">
+                            <span class="price-text">рублей</span>
+                        </div>
+                        <div class="input__wrapper">
+                            <label for="passenger-check" class="publish__form__label">Услуг не оказываю</label>
+                            <input type="checkbox" id="passenger-check" class="input-reset publish__form__checkbox">
+                        </div>
+                    </div>
+                    <div class="price__option__block">
+                        <div class="input__wrapper">
+                            <label for="moto" class="publish__form__label">Мототехника</label>
+                            <input type="text" class="input-reset publish__form__input" id="moto">
+                            <span class="price-text">рублей</span>
+                        </div>
+                        <div class="input__wrapper">
+                            <label for="moto-check" class="publish__form__label">Услуг не оказываю</label>
+                            <input type="checkbox" id="moto-check" class="input-reset publish__form__checkbox">
+                        </div>
+                    </div>
+                    <div class="price__option__block">
+                        <div class="input__wrapper">
+                            <label for="off-road" class="publish__form__label">Внедорожник</label>
+                            <input type="text" class="input-reset publish__form__input" id="off-road">
+                            <span class="price-text">рублей</span>
+                        </div>
+                        <div class="input__wrapper">
+                            <label for="off-road-check" class="publish__form__label">Услуг не оказываю</label>
+                            <input type="checkbox" id="off-road-check" class="input-reset publish__form__checkbox">
+                        </div>
+                    </div>
+                    <div class="price__option__block">
+                        <div class="input__wrapper">
+                            <label for="microbus" class="publish__form__label">Микроавтобус</label>
+                            <input type="text" class="input-reset publish__form__input" id="microbus">
+                            <span class="price-text">рублей</span>
+                        </div>
+                        <div class="input__wrapper">
+                            <label for="microbus-check" class="publish__form__label">Услуг не оказываю</label>
+                            <input type="checkbox" id="microbus-check" class="input-reset publish__form__checkbox">
+                        </div>
+                    </div>
+                    <div class="price__option__block">
+                        <div class="input__wrapper">
+                            <label for="off-town" class="publish__form__label">Загородный тариф</label>
+                            <input type="text" class="input-reset publish__form__input" id="off-town">
+                            <span class="price-text">руб/км</span>
+                        </div>
+                        <div class="input__wrapper">
+                            <label for="off-town-check" class="publish__form__label">Услуг не оказываю</label>
+                            <input type="checkbox" id="off-town-check" class="input-reset publish__form__checkbox">
+                        </div>
+                    </div>
+                    <h6 class="form__separator"><span>Фото</span></h6>
+                    <div class="input__wrapper photo-addition">
+                        <span class="photo__btn__label">Прикрепите фотографию к объявлению</span>
+                        <button class="btn-reset upload__btn">Загрузить</button>
+                    </div class="input__wrapper">
+                    <div class="input__wrapper agreement__block">
+                        <label for="agreement" class="publish__form__label">Я соглашаюсь с правилами использования сервиса, а также с передачей и обработкой моих данных в evarus.ru. Я подтверждаю своё совершеннолетие и ответственность за размещение.</label>
+                        <input class="publish__form__checkbox input-reset" type="checkbox" id="agreement">
+                    </div>
+                    <button class="btn-reset submit__btn">Продолжить</button>
+                </form>
+            </div>
+        </div>
+        <button class="btn-reset page-up__btn">
+            <svg class="page-up__btn__svg" width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 25C7 25.5523 7.44771 26 8 26C8.55228 26 9 25.5523 9 25L7 25ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 25L9 1L7 1L7 25L9 25Z" fill="#0297D4"/>
+            </svg>                
+        </button>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="header__logo">
+                <img src="assets/Logo.png" alt="" class="logo__img">
+            </div>
+            <nav class="footer__nav">
+                <span class="footer__nav__item">Вызвать эвакуатор</span>
+                <span class="footer__nav__item">Добавить эвакуатор на сайт</span>
+                <span class="footer__nav__item">Помощь</span>
+                <span class="footer__nav__item">Правила оплаты</span>
+                <span class="footer__nav__item">Защита персональных данных</span>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
