@@ -90,9 +90,9 @@ const sortList = (studentsArr, prop, dir=false) => {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-    await fillDataFromArray();
     const students = await getStudentsList();
     await renderStudentsTable(students);
+    await fillDataFromArray();
     const datebirthInput = document.querySelector('.datebirth-input');
     datebirthInput.max = standartDate(new Date());
     const nameHead = document.querySelector('.name-head-cell');
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         else if (startDateInput.value >= new Date().getFullYear() && new Date().getMonth() < 8){
             removeAlert();
             validationAlertBlock.append(validationAlert);
-            validationAlert.textContent += ' Этот учебный год еще не начался';
+            validationAlert.textContent += ' Этот учебный год еще начался';
             return
         }
         else if (facultySelect.value === ''){
